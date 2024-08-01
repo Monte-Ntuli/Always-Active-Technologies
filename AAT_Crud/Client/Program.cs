@@ -20,6 +20,7 @@ namespace Client
 
             builder.Services.AddScoped<IAccountService, AccountService>();
             builder.Services.AddScoped<IEventsService, EventsService>();
+            builder.Services.AddScoped<IEventRegistrationService, EventRegistrationService>();
 
             builder.Services.AddBlazoredLocalStorage();
             builder.Services.AddMudServices();

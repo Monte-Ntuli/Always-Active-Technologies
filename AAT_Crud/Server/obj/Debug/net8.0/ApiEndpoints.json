@@ -51,7 +51,7 @@
     "Parameters": [
       {
         "Name": "UserId",
-        "Type": "System.Guid",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
@@ -115,7 +115,7 @@
     "Parameters": [
       {
         "Name": "UserId",
-        "Type": "System.Guid",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

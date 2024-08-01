@@ -61,7 +61,7 @@ namespace Client.Pages.Account
                 var EmailForgotPassWord = email.Remove(email.Length - 1, 1);
                 var Email = EmailForgotPassWord.Replace("\'", string.Empty).Trim(new char[] { (char)39 });
                 var username = EmailForgotPassWord.Remove(0, 1);
-                AppUser = await AccountService.GetUserByEmailTest(username);
+                AppUser = await AccountService.GetUserByEmail(username);
             }
         }
         #endregion

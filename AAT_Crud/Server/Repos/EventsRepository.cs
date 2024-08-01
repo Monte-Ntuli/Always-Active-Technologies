@@ -45,7 +45,7 @@ namespace AAT_Crud.Repos
             return await _dbContext.Events.ToListAsync();
         }
 
-        public async Task<List<EventsEntity>> GetAllEventsByUser(Guid Id)
+        public async Task<List<EventsEntity>> GetAllEventsByUser(string Id)
         {
             var Events = await _dbContext.Events.Where(x => x.CreatedBy == Id).ToListAsync();
 

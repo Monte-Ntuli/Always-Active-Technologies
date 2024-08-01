@@ -329,8 +329,40 @@
       "url": "_framework\/Microsoft.AspNetCore.Components.WebAssembly.wasm"
     },
     {
+      "hash": "sha256-7pDQ47WJ20OcdAAtaWaO2dCH2kvrEFbQUFRjQfksjBM=",
+      "url": "_framework\/Microsoft.AspNetCore.Cryptography.Internal.wasm"
+    },
+    {
+      "hash": "sha256-0E6K7uJgl7BHAJsv04S7sQCb3OCMCVzu6EcXC7q6hlA=",
+      "url": "_framework\/Microsoft.AspNetCore.Cryptography.KeyDerivation.wasm"
+    },
+    {
+      "hash": "sha256-1DVI9n+19bvSTrzQh32BxZgeHbmFs6oJVIjx6iizbq0=",
+      "url": "_framework\/Microsoft.AspNetCore.Identity.EntityFrameworkCore.wasm"
+    },
+    {
       "hash": "sha256-H+Or4mx9ew+622c40gHkM70UI+dPHz2Hpa4CGjtF1RA=",
       "url": "_framework\/Microsoft.AspNetCore.Metadata.wasm"
+    },
+    {
+      "hash": "sha256-7fSb2cix6eYFWRp3GE9BNYF1kJDpGd8BYDQQguMYY+8=",
+      "url": "_framework\/Microsoft.EntityFrameworkCore.wasm"
+    },
+    {
+      "hash": "sha256-2QXv1VSzY\/hx2sAlze6Gv54lMM8JHc6dBeXFjKJjGl0=",
+      "url": "_framework\/Microsoft.EntityFrameworkCore.Abstractions.wasm"
+    },
+    {
+      "hash": "sha256-EJIIG1PqtFvsOCHvHHgdPYiyQ795Ju+nmS1lluwH4pg=",
+      "url": "_framework\/Microsoft.EntityFrameworkCore.Relational.wasm"
+    },
+    {
+      "hash": "sha256-ygxx8pKlN4YllvAX2HADU+dKWSOZRMNfSP4nHkPMH+8=",
+      "url": "_framework\/Microsoft.Extensions.Caching.Abstractions.wasm"
+    },
+    {
+      "hash": "sha256-K0Qzxs1gptgogO6juGZzfFp3Q7gUtMCJbo7ateym6cw=",
+      "url": "_framework\/Microsoft.Extensions.Caching.Memory.wasm"
     },
     {
       "hash": "sha256-UDGEQR7J3WTfzYMgOzxVIBwFQtKEeJvO8UgrWagypdE=",
@@ -371,6 +403,14 @@
     {
       "hash": "sha256-AnWUKd0qJ8ZNKkRC0AFK2cjjszB7reXiP+bXdIi8bic=",
       "url": "_framework\/Microsoft.Extensions.FileSystemGlobbing.wasm"
+    },
+    {
+      "hash": "sha256-csl08LgrnE8cIIuUEMRHD9+96lmrBg1lDpDCRgnXs3A=",
+      "url": "_framework\/Microsoft.Extensions.Identity.Core.wasm"
+    },
+    {
+      "hash": "sha256-KHT3L7+e5JEz\/dkrLihqszJF8E3PxXCCFYc892Ni3UA=",
+      "url": "_framework\/Microsoft.Extensions.Identity.Stores.wasm"
     },
     {
       "hash": "sha256-kMLgnUXyCK3PjWaFVpQGP59lzJkRYIrR9nxlovntXE0=",
@@ -1121,23 +1161,23 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-rpqlpRhvKp\/SwwaYehbVM55Y7BIIEjTNoVyPROLv9YM=",
+      "hash": "sha256-WdETHDVimE7ZIHQ9naj7kgT8m0p1K4VgGOWUWBIX57M=",
       "url": "_framework\/SharedClasses.wasm"
     },
     {
-      "hash": "sha256-deR9XiSDdilOt\/nkdHiIPNAA+aVgrVr5\/c004UXjd44=",
+      "hash": "sha256-PPn\/NBzN6zoSj6hRjdj6oRX5cMM33wU\/UjvoFyViPZg=",
       "url": "_framework\/SharedClasses.pdb"
     },
     {
-      "hash": "sha256-miaP00X3ZwItNtz5EVGv53efDcKbAg8xTgO\/LBcECZs=",
+      "hash": "sha256-mq8aShailmf6T\/wzhXJsDrhp8IsPSPfv8ReTC60MePM=",
       "url": "_framework\/Client.wasm"
     },
     {
-      "hash": "sha256-eFoKSSadqG1vXl5ymGi85vl\/3WUDHV0d\/26My5sMT44=",
+      "hash": "sha256-+lPOpfxieC1RCr1b5jZS+nuRuzfwKwbrG6OmVbb\/\/rE=",
       "url": "_framework\/Client.pdb"
     },
     {
-      "hash": "sha256-sAjFneBGMD9uxR+UfyBgi+t4adv5us3AFyacsE9IL64=",
+      "hash": "sha256-x8M93vsECGkcybPna0B0x8dsSIN40tlzjXNAEzcC5+A=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -1149,5 +1189,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "msyjCN+C"
+  "version": "OAj6k80Q"
 };

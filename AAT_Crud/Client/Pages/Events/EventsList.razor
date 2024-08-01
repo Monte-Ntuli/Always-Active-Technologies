@@ -43,33 +43,29 @@
 <div>
     <main class="container">
         <div class="row">
-            <div class="col-4">
-                <div lass="col-md-5 border-right">
-                    <div class="py-3">
-                        @foreach (var eventItem in Events)
-                        {
-                            <div class="col mt-3">
-                                <MudCard>
-                                    <MudCardHeader>
-                                        <CardHeaderContent>
-                                            <MudText Typo="Typo.h6">@eventItem.Name</MudText>
-                                        </CardHeaderContent>
-                                    </MudCardHeader>
-                                    <MudCardMedia Image="images/background2.jpg" Height="200" />
-                                    <MudCardContent>
-                                        <MudText>@eventItem.Description</MudText>
-                                        <MudText Typo="Typo.body2">Booked seats @eventItem.Seats</MudText>
-                                        <MudText Typo="Typo.body2">Available seats </MudText>
-                                    </MudCardContent>
-                                    <MudCardActions>
-                                        <MudButton Variant="Variant.Text" Color="Color.Primary">Book Ticket</MudButton>
-                                    </MudCardActions>
-                                </MudCard>
-                            </div>
-                        }
-                    </div>
+            @foreach (var eventItem in Events)
+            {
+                <div class="col mt-3">
+                    <MudCard>
+                        <MudCardHeader>
+                            <CardHeaderContent>
+                                <MudText Typo="Typo.h6">@eventItem.Name</MudText>
+                            </CardHeaderContent>
+                        </MudCardHeader>
+                        <MudCardMedia Image="images/background2.jpg" Height="200" />
+                        <MudCardContent>
+                            <MudText>@eventItem.Description</MudText>
+                            <MudText Typo="Typo.body2">Booked seats @eventItem.Seats</MudText>
+                            <MudText Typo="Typo.body2">Available seats </MudText>
+                        </MudCardContent>
+                        <MudCardActions>
+                            <MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick="(() => BookTicket(eventItem.Id) )">Book Ticket</MudButton>
+                            &nbsp;
+                            <MudButton Variant="Variant.Outlined" Color="Color.Secondary" @onclick="(() =>ViewEvent(eventItem.Id))">View Event</MudButton>
+                        </MudCardActions>
+                    </MudCard>
                 </div>
-            </div>
+            }
         </div>
     </main>
 </div>

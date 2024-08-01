@@ -52,7 +52,7 @@ namespace AAT_Crud.Repos
             return EventReg;
         }
 
-        public async Task<List<EventRegistrationEntity>> GetAllUserRegisteredEvents(Guid Id)
+        public async Task<List<EventRegistrationEntity>> GetAllUserRegisteredEvents(string Id)
         {
             return await _dbContext.EventRegistration.Where(x => x.UserId == Id).ToListAsync();
         }

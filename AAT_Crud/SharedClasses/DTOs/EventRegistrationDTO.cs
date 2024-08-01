@@ -8,7 +8,7 @@ namespace SharedClasses.DTOs
 {
     public class EventRegistrationDTO
     {
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
         public Guid EventId { get; set; }
     }
 }

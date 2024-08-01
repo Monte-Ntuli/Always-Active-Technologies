@@ -44,7 +44,7 @@ namespace AAT_Crud.Controllers
 
         #region Get Registered Events
         [HttpGet("Get-Registered/{UserId}")]
-        public async Task<IActionResult> GetRegistered(Guid UserId)
+        public async Task<IActionResult> GetRegistered(string UserId)
         {
             var GetRegistered = await _unitOfWork.EventRegistration.GetAllUserRegisteredEvents(UserId);
             if (GetRegistered != null) { return Accepted(GetRegistered); } else return BadRequest(GetRegistered);

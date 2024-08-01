@@ -1,8 +1,10 @@
-﻿namespace SharedClasses.DTOs
+﻿using Microsoft.AspNetCore.Identity;
+
+namespace SharedClasses.DTOs
 {
     public class CreateEventRegDTO
     {
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
         public Guid EventId { get; set; }
     }
 }

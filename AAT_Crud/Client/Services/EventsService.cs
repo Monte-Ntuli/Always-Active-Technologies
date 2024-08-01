@@ -23,7 +23,7 @@ namespace Client.Services
 
         public async Task CreateEvent(CreateEventDTO createEvent)
         {
-            var result = await _httpClient.PostAsJsonAsync("Event/Create", createEvent);
+            var result = await _httpClient.PostAsJsonAsync("https://localhost:7054/api/Event/Create", createEvent);
             if (result.StatusCode == System.Net.HttpStatusCode.Accepted)
             {
                 var response = await result.Content.ReadFromJsonAsync<CreateEventDTO>();

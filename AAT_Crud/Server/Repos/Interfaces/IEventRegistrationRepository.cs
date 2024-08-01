@@ -6,6 +6,6 @@ namespace AAT_Crud.Repos.Interfaces
     {
         Task<EventRegistrationEntity> AddAsync(EventRegistrationEntity entity);
         Task<EventRegistrationEntity> DeleteAsync(Guid Id);
-        Task<List<EventRegistrationEntity>> GetAllUserRegisteredEvents(Guid Id);
+        Task<List<EventRegistrationEntity>> GetAllUserRegisteredEvents(string Id);
     }
 }

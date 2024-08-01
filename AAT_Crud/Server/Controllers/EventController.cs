@@ -53,7 +53,7 @@ namespace AAT_Crud.Controllers
 
         #region Get all by user id
         [HttpGet("Get-All-Events-By-UserId/{UserId}")]
-        public async Task<IActionResult> GetAllEventsByUserId(Guid UserId)
+        public async Task<IActionResult> GetAllEventsByUserId(string UserId)
         {
             var events = await _unitOfWork.Events.GetAllEventsByUser(UserId);
             if (events != null) { return Accepted(events); } else return BadRequest(events);

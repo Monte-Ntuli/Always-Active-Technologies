@@ -33,7 +33,7 @@ namespace Client.Services
         #region change password
         public async Task ChangePassword(LoginDTO loginDTO)
         {
-            var result = await _httpClient.PostAsJsonAsync("api/AppUser/ChangePassword/", loginDTO);
+            var result = await _httpClient.PostAsJsonAsync("https://localhost:7054/api/User/ChangePassword/", loginDTO);
             var response = result.StatusCode;
 
             if (response == System.Net.HttpStatusCode.Accepted)
@@ -51,7 +51,7 @@ namespace Client.Services
         #region forgot password
         public async Task ForgotPassword(LoginDTO loginDTO)
         {
-            var result = await _httpClient.PostAsJsonAsync("api/AppUser/ForgotPassword/", loginDTO);
+            var result = await _httpClient.PostAsJsonAsync("https://localhost:7054/api/User/ForgotPassword/", loginDTO);
             var response = result.StatusCode;
 
             if (response == System.Net.HttpStatusCode.Accepted)
@@ -87,7 +87,7 @@ namespace Client.Services
         #region Register new account
         public async Task Register(UserDTO appUser)
         {
-            var result = await _httpClient.PostAsJsonAsync("api/AppUser/Register", appUser);
+            var result = await _httpClient.PostAsJsonAsync("https://localhost:7054/api/User/Register", appUser);
 
             var response = result.StatusCode;
             if (response != System.Net.HttpStatusCode.Accepted)
@@ -106,7 +106,7 @@ namespace Client.Services
         #region Login
         public async Task Login(LoginDTO loginDTO)
         {
-            var result = await _httpClient.PostAsJsonAsync("api/AppUser/Login", loginDTO);
+            var result = await _httpClient.PostAsJsonAsync("https://localhost:7054/api/User/Login", loginDTO);
             var response = result.StatusCode;
             if (response != System.Net.HttpStatusCode.Accepted)
             {
@@ -128,9 +128,9 @@ namespace Client.Services
         #endregion
 
         #region Get Admin Details
-        public async Task<UserDTO> GetUserByEmailTest(string email)
+        public async Task<UserDTO> GetUserByEmail(string email)
         {
-            var result = await _httpClient.GetFromJsonAsync<UserDTO>($"api/AppUser/GetUserByEmail/" + email);
+            var result = await _httpClient.GetFromJsonAsync<UserDTO>("https://localhost:7054/api/User/GetUserByEmail/" + email);
             return result;
         }
         #endregion
