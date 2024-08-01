@@ -9,6 +9,7 @@ namespace AAT_Crud
     {
         public virtual DbSet<EventRegistrationEntity> EventRegistration { get; set; }
         public virtual DbSet<EventsEntity> Events { get; set; }
+        public virtual DbSet<AppUser> AppUsers { get; set; }
         public EventsDBContext(DbContextOptions options) : base(options) { }
         protected override void OnModelCreating(ModelBuilder builder)
         {
