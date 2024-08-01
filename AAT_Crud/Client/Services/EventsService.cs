@@ -36,25 +36,25 @@ namespace Client.Services
         }
         public async Task<IEnumerable<EventsDTO>> GetAllEvents()
         {
-            Events = await _httpClient.GetFromJsonAsync<IEnumerable<EventsDTO>>("Event/Get-All-Events");
+            Events = await _httpClient.GetFromJsonAsync<IEnumerable<EventsDTO>>("https://localhost:7054/api/Event/Get-All-Events");
             return Events;
         }
 
         public async Task<IEnumerable<EventsDTO>> GetAllUserEvents(Guid UserId)
         {
-            UserEvents = await _httpClient.GetFromJsonAsync<IEnumerable<EventsDTO>>("Event/Get-All-Events-By-UserId" + UserId);
+            UserEvents = await _httpClient.GetFromJsonAsync<IEnumerable<EventsDTO>>("https://localhost:7054/api/Event/Get-All-Events-By-UserId" + UserId);
             return UserEvents;
         }
 
         public async Task<HttpResponseMessage> DeleteEvent(Guid EventId)
         {
-            var DeleteEvent = await _httpClient.PostAsJsonAsync<Guid>("Event/Delete/" , EventId);
+            var DeleteEvent = await _httpClient.PostAsJsonAsync<Guid>("https://localhost:7054/api/Event/Delete/", EventId);
             return DeleteEvent;
         }
 
         public async Task Update(UpdateEventDTO updateEvent)
         {
-            var result = await _httpClient.PostAsJsonAsync("Event/Update", updateEvent);
+            var result = await _httpClient.PostAsJsonAsync("https://localhost:7054/api/Event/Update", updateEvent);
             if(result.StatusCode == System.Net.HttpStatusCode.Accepted)
             {
                 var response = await result.Content.ReadFromJsonAsync<EventsDTO>();

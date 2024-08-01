@@ -32,8 +32,9 @@ namespace AAT_Crud
                 options.AddPolicy(name: MyAllowSpecificOrigins,
                                   builder =>
                                   {
-                                      builder.WithOrigins("http://localhost:4200")
+                                      builder.WithOrigins("https://localhost:7134/","http://localhost:7134")
                                       .AllowAnyHeader()
+                                      .AllowAnyOrigin()
                                       .AllowAnyMethod();
                                   });
             });

@@ -21,7 +21,7 @@ namespace Client.Services
 
         public async Task CreateEventRegistration(CreateEventRegDTO createEventReg)
         {
-            var result = await _httpClient.PostAsJsonAsync("EventRegistration/Create", createEventReg);
+            var result = await _httpClient.PostAsJsonAsync("https://localhost:7054/api/EventRegistration/Create", createEventReg);
             if (result.StatusCode == System.Net.HttpStatusCode.Accepted)
             {
                 var response = await result.Content.ReadFromJsonAsync<CreateEventRegDTO>();
@@ -35,13 +35,13 @@ namespace Client.Services
 
         public async Task<HttpResponseMessage> DeleteEventRegistration(Guid EventId)
         {
-            var DeleteEvent = await _httpClient.PostAsJsonAsync<Guid>("EventRegistration/Delete/", EventId);
+            var DeleteEvent = await _httpClient.PostAsJsonAsync<Guid>("https://localhost:7054/api/EventRegistration/Delete/", EventId);
             return DeleteEvent;
         }
 
         public async Task<IEnumerable<EventRegistrationDTO>> GetAllUserEventRegistrations(Guid UserId)
         {
-            UserEventReg = await _httpClient.GetFromJsonAsync<IEnumerable<EventRegistrationDTO>>("EventRegistration/Get-Registered" + UserId);
+            UserEventReg = await _httpClient.GetFromJsonAsync<IEnumerable<EventRegistrationDTO>>("https://localhost:7054/api/EventRegistration/Get-Registered" + UserId);
             return UserEventReg;
         }
     }
