@@ -6,5 +6,6 @@
         public string Description { get; set; }
         public int Seats { get; set; }
         public Guid CreatedBy { get; set; }
+        public DateTime EventDate { get; set; }
     }
 }
