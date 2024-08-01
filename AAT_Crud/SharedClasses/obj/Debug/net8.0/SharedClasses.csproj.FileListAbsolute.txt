@@ -20,3 +20,15 @@ C:\Users\E7240\source\repos\AAT_Crud\SharedClasses\obj\Debug\net8.0\SharedClasse
 C:\Users\E7240\source\repos\AAT_Crud\SharedClasses\obj\Debug\net8.0\refint\SharedClasses.dll
 C:\Users\E7240\source\repos\AAT_Crud\SharedClasses\obj\Debug\net8.0\SharedClasses.pdb
 C:\Users\E7240\source\repos\AAT_Crud\SharedClasses\obj\Debug\net8.0\ref\SharedClasses.dll
+C:\Users\E7240\Documents\GitHub\Always-Active-Technologies\AAT_Crud\SharedClasses\bin\Debug\net8.0\SharedClasses.deps.json
+C:\Users\E7240\Documents\GitHub\Always-Active-Technologies\AAT_Crud\SharedClasses\bin\Debug\net8.0\SharedClasses.dll
+C:\Users\E7240\Documents\GitHub\Always-Active-Technologies\AAT_Crud\SharedClasses\bin\Debug\net8.0\SharedClasses.pdb
+C:\Users\E7240\Documents\GitHub\Always-Active-Technologies\AAT_Crud\SharedClasses\obj\Debug\net8.0\SharedClasses.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\E7240\Documents\GitHub\Always-Active-Technologies\AAT_Crud\SharedClasses\obj\Debug\net8.0\SharedClasses.AssemblyInfoInputs.cache
+C:\Users\E7240\Documents\GitHub\Always-Active-Technologies\AAT_Crud\SharedClasses\obj\Debug\net8.0\SharedClasses.AssemblyInfo.cs
+C:\Users\E7240\Documents\GitHub\Always-Active-Technologies\AAT_Crud\SharedClasses\obj\Debug\net8.0\SharedClasses.csproj.CoreCompileInputs.cache
+C:\Users\E7240\Documents\GitHub\Always-Active-Technologies\AAT_Crud\SharedClasses\obj\Debug\net8.0\SharedClasses.sourcelink.json
+C:\Users\E7240\Documents\GitHub\Always-Active-Technologies\AAT_Crud\SharedClasses\obj\Debug\net8.0\SharedClasses.dll
+C:\Users\E7240\Documents\GitHub\Always-Active-Technologies\AAT_Crud\SharedClasses\obj\Debug\net8.0\refint\SharedClasses.dll
+C:\Users\E7240\Documents\GitHub\Always-Active-Technologies\AAT_Crud\SharedClasses\obj\Debug\net8.0\SharedClasses.pdb
+C:\Users\E7240\Documents\GitHub\Always-Active-Technologies\AAT_Crud\SharedClasses\obj\Debug\net8.0\ref\SharedClasses.dll

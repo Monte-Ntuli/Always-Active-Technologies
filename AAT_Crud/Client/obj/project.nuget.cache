@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "+gLC6uZc3jAZwQMt1nqdOkBMmZ3SWkN7xxB0rgaCyClfxejtTqRFZylm7qZOraQp+w7NNFpniZnGcmc75uioaQ==",
+  "dgSpecHash": "9O/DtmzmG4KvyHgxh5yFTdRg4aF30hI2+pw5MevlsPlYRcIXifWmrBL2fkS+Z2yeW9GHwO9KDf7GElqiWjm69w==",
   "success": true,
-  "projectFilePath": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\Client.csproj",
+  "projectFilePath": "C:\\Users\\E7240\\Documents\\GitHub\\Always-Active-Technologies\\AAT_Crud\\Client\\Client.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\E7240\\.nuget\\packages\\blazored.localstorage\\4.5.0\\blazored.localstorage.4.5.0.nupkg.sha512",
     "C:\\Users\\E7240\\.nuget\\packages\\blazored.sessionstorage\\2.4.0\\blazored.sessionstorage.2.4.0.nupkg.sha512",
+    "C:\\Users\\E7240\\.nuget\\packages\\bootstrap\\5.3.3\\bootstrap.5.3.3.nupkg.sha512",
     "C:\\Users\\E7240\\.nuget\\packages\\microsoft.aspnetcore.authorization\\8.0.7\\microsoft.aspnetcore.authorization.8.0.7.nupkg.sha512",
     "C:\\Users\\E7240\\.nuget\\packages\\microsoft.aspnetcore.components\\8.0.7\\microsoft.aspnetcore.components.8.0.7.nupkg.sha512",
     "C:\\Users\\E7240\\.nuget\\packages\\microsoft.aspnetcore.components.analyzers\\8.0.7\\microsoft.aspnetcore.components.analyzers.8.0.7.nupkg.sha512",

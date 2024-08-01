@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\SharedClasses\\SharedClasses.csproj": {}
+    "C:\\Users\\E7240\\Documents\\GitHub\\Always-Active-Technologies\\AAT_Crud\\SharedClasses\\SharedClasses.csproj": {}
   },
   "projects": {
-    "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\SharedClasses\\SharedClasses.csproj": {
+    "C:\\Users\\E7240\\Documents\\GitHub\\Always-Active-Technologies\\AAT_Crud\\SharedClasses\\SharedClasses.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\SharedClasses\\SharedClasses.csproj",
+        "projectUniqueName": "C:\\Users\\E7240\\Documents\\GitHub\\Always-Active-Technologies\\AAT_Crud\\SharedClasses\\SharedClasses.csproj",
         "projectName": "SharedClasses",
-        "projectPath": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\SharedClasses\\SharedClasses.csproj",
+        "projectPath": "C:\\Users\\E7240\\Documents\\GitHub\\Always-Active-Technologies\\AAT_Crud\\SharedClasses\\SharedClasses.csproj",
         "packagesPath": "C:\\Users\\E7240\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\SharedClasses\\obj\\",
+        "outputPath": "C:\\Users\\E7240\\Documents\\GitHub\\Always-Active-Technologies\\AAT_Crud\\SharedClasses\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
