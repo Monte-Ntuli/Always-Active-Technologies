@@ -2,5 +2,4 @@
 
 GET {{AAT_Crud_HostAddress}}/weatherforecast/
 Accept: application/json
-
 ###
