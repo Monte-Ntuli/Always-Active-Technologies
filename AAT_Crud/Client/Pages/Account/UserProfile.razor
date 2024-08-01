@@ -1,0 +1,85 @@
+﻿@page "/Profile"
+@inherits AccountBase;
+@using MudBlazor
+
+<div>
+
+    <main class="container">
+        <a href="Dashboard" class="nav-link text-black link-dark">
+            <img src="iCONS/arrow_back_FILL0_wght400_GRAD0_opsz48.png" class="rounded-circle">
+        </a>
+        <div class="container">
+
+            <MudCard Class="row">
+
+                <!-- This is the Profile Details -->
+
+                <div class="col-md-5 border-right">
+
+                    <MudItem Class="d-flex justify-content-between align-items-center mb-3">
+                        <MudCheckBox @bind-Value="isEnabled">Edit Profile</MudCheckBox>
+                    </MudItem>
+                    <MudForm Class="p-3" Disabled="isEnabled">
+
+                        <MudPaper Class="row mt-3">
+                            <MudItem class="col-md-6">
+                                <MudTextField Label="Name" Class="form-control"
+                                @bind-Value="AppUser.FirstName" For="@(() => AppUser.FirstName)" Placeholder="@AppUser.FirstName" InputType="InputType.Text" />
+                            </MudItem>
+                            <MudItem Class="col-md-6">
+                                <MudTextField Label="Last Name" Class="form-control"
+                                @bind-Value="AppUser.LastName" For="@(() => AppUser.LastName)" Placeholder="@AppUser.LastName" InputType="InputType.Text" />
+                            </MudItem>
+                        </MudPaper>
+                        <MudPaper Class="row mt-3">
+                            <MudItem Class="col-md-12">
+                                <MudTextField Label="Phone Number" Class="form-control"
+                                @bind-Value="AppUser.PhoneNum" For="@(() => AppUser.PhoneNum)" Placeholder="@AppUser.PhoneNum" InputType="InputType.Text" />
+                            </MudItem>
+                            <MudItem Class="col-md-12">
+                                <MudTextField Label="Email" Class="form-control"
+                                @bind-Value="AppUser.Email" For="@(() => AppUser.Email)" Placeholder="@AppUser.Email" InputType="InputType.Text" />
+                            </MudItem>
+                            <MudItem Class="col-md-12">
+                                <MudTextField Label="UserName" Class="form-control"
+                                @bind-Value="AppUser.UserName" For="@(() => AppUser.UserName)" Placeholder="@AppUser.UserName" InputType="InputType.Text" />
+                            </MudItem>
+                            <br />
+                            &nbsp;
+                            &nbsp;
+                            <MudButton Class="btn btn-success" Variant="Variant.Filled" Color="Color.Success"> Update </MudButton> &nbsp;
+                            <MudButton Class="btn btn-warning" Variant="Variant.Filled" Color="Color.Warning" @onclick="GotoChangePassword">Change Password</MudButton>
+                        </MudPaper>
+                    </MudForm>
+
+                </div>
+
+                <!-- This is the Address Details -->
+                <div class="col-md-5 border-right">
+                    <MudPaper Class="p-3">
+                        <MudItem Class="d-flex justify-content-between align-items-center mb-3">
+                            <h4 class="text-right">Profile Details</h4>
+                        </MudItem>
+                        <MudForm Disabled="isEnabled" Class="row mt-3">
+                            <MudItem Class="col-md-12"><MudTextField T="string" Label="Complex Name" Variant="Variant.Text" /></MudItem>
+                            <MudItem Class="col-md-12"><MudTextField T="int" Label="Street Number" Variant="Variant.Text" /></MudItem>
+                            <MudItem Class="col-md-12"><MudTextField T="string" Label="Street Name" Variant="Variant.Text" /></MudItem>
+                            <MudItem Class="col-md-12"><MudTextField T="string" Label="Suburb" Variant="Variant.Text" /></MudItem>
+                            <MudItem Class="col-md-12"><MudTextField T="string" Label="City" Variant="Variant.Text" /></MudItem>
+                            <MudItem Class="col-md-12"><MudTextField T="string" Label="Province" Variant="Variant.Text" /></MudItem>
+                            <MudItem Class="col-md-12"><MudTextField T="string" Label="Country" Variant="Variant.Text" /></MudItem>
+                            <MudItem Class="col-md-12"><MudTextField T="int" Label="Postal Code" Variant="Variant.Text" /></MudItem>
+
+                        </MudForm>
+                    </MudPaper>
+                </div>
+
+            </MudCard>
+        </div>
+    </main>
+
+</div>
+
+@code {
+
+}

@@ -1,0 +1,6 @@
+@AAT_Crud_HostAddress = http://localhost:5067
+
+GET {{AAT_Crud_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

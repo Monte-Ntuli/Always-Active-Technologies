@@ -1,0 +1,86 @@
+is_global = true
+build_property.EnableAotAnalyzer = 
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = false
+build_property.IncludeAllContentForSelfExtract = 
+build_property.MudDebugAnalyzer = 
+build_property.MudAllowedAttributePattern = 
+build_property.MudIllegalParameters = 
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = browser
+build_property.RootNamespace = Client
+build_property.RootNamespace = Client
+build_property.ProjectDir = C:\Users\E7240\source\repos\AAT_Crud\Client\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = false
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\E7240\source\repos\AAT_Crud\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/E7240/source/repos/AAT_Crud/Client/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/E7240/source/repos/AAT_Crud/Client/Layout/EmptyLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XEVtcHR5TGF5b3V0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/E7240/source/repos/AAT_Crud/Client/Layout/Footer.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XEZvb3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/E7240/source/repos/AAT_Crud/Client/Layout/Header.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XEhlYWRlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/E7240/source/repos/AAT_Crud/Client/Layout/SideNav.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XFNpZGVOYXYucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/E7240/source/repos/AAT_Crud/Client/Layout/TopNav.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XFRvcE5hdi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/E7240/source/repos/AAT_Crud/Client/Pages/Account/ChangePassword.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxDaGFuZ2VQYXNzd29yZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/E7240/source/repos/AAT_Crud/Client/Pages/Account/ForgotChangePassword.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxGb3Jnb3RDaGFuZ2VQYXNzd29yZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/E7240/source/repos/AAT_Crud/Client/Pages/Account/ForgotPasswordEmail.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxGb3Jnb3RQYXNzd29yZEVtYWlsLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/E7240/source/repos/AAT_Crud/Client/Pages/Account/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxMb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/E7240/source/repos/AAT_Crud/Client/Pages/Account/Register.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxSZWdpc3Rlci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/E7240/source/repos/AAT_Crud/Client/Pages/Account/UserProfile.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxVc2VyUHJvZmlsZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/E7240/source/repos/AAT_Crud/Client/Pages/Events/EventsList.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnRzXEV2ZW50c0xpc3QucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/E7240/source/repos/AAT_Crud/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/E7240/source/repos/AAT_Crud/Client/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-tmopy668it

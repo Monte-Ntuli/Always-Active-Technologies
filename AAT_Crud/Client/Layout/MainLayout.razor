@@ -1,0 +1,33 @@
+﻿@using MudBlazor
+@inherits LayoutComponentBase
+
+<div>
+    <MudThemeProvider />
+    <MudDialogProvider />
+    <MudSnackbarProvider />
+
+    <!-- This is the Header -->
+    <TopNav />
+
+    <main>
+        <div class="row">
+
+            <!-- This is the Sidebar/SideNav-->
+            <div class="col-3">
+                <SideNav />
+            </div>
+
+            <!-- This is the main page content -->
+            <div class="col-8">
+                <div class="main-body">
+                    @Body
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- This is the Footer -->
+    <div class="footer">
+        <Footer />
+    </div>
+</div>

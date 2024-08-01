@@ -1,0 +1,157 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\obj\\Debug\\net8.0\\compressed\\gnm8k30ig7.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\obj\\Debug\\net8.0\\scopedcss\\bundle\\Client.styles.css",
+      "PackagePath": "staticwebassets\\Client.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\obj\\Debug\\net8.0\\service-worker-assets.js",
+      "PackagePath": "staticwebassets\\service-worker-assets.js"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\obj\\Debug\\net8.0\\service-worker\\service-worker.published.js",
+      "PackagePath": "staticwebassets\\service-worker.js"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\Icons\\account_circle_FILL0_wght400_GRAD0_opsz48.png",
+      "PackagePath": "staticwebassets\\Icons\\account_circle_FILL0_wght400_GRAD0_opsz48.png"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\Icons\\arrow_back_FILL0_wght400_GRAD0_opsz48.png",
+      "PackagePath": "staticwebassets\\Icons\\arrow_back_FILL0_wght400_GRAD0_opsz48.png"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\Icons\\assignment_FILL0_wght400_GRAD0_opsz48.png",
+      "PackagePath": "staticwebassets\\Icons\\assignment_FILL0_wght400_GRAD0_opsz48.png"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\Icons\\assignment_late_FILL0_wght400_GRAD0_opsz48.png",
+      "PackagePath": "staticwebassets\\Icons\\assignment_late_FILL0_wght400_GRAD0_opsz48.png"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\Icons\\calendar_month_FILL0_wght400_GRAD0_opsz48.png",
+      "PackagePath": "staticwebassets\\Icons\\calendar_month_FILL0_wght400_GRAD0_opsz48.png"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\Icons\\car_crash_FILL0_wght400_GRAD0_opsz48.png",
+      "PackagePath": "staticwebassets\\Icons\\car_crash_FILL0_wght400_GRAD0_opsz48.png"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\Icons\\dashboard_FILL0_wght400_GRAD0_opsz48.png",
+      "PackagePath": "staticwebassets\\Icons\\dashboard_FILL0_wght400_GRAD0_opsz48.png"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\Icons\\delete_FILL0_wght400_GRAD0_opsz48.png",
+      "PackagePath": "staticwebassets\\Icons\\delete_FILL0_wght400_GRAD0_opsz48.png"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\Icons\\domain_FILL0_wght400_GRAD0_opsz48.png",
+      "PackagePath": "staticwebassets\\Icons\\domain_FILL0_wght400_GRAD0_opsz48.png"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\Icons\\edit_FILL0_wght400_GRAD0_opsz48.png",
+      "PackagePath": "staticwebassets\\Icons\\edit_FILL0_wght400_GRAD0_opsz48.png"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\Icons\\exit_to_app_FILL0_wght400_GRAD0_opsz48.png",
+      "PackagePath": "staticwebassets\\Icons\\exit_to_app_FILL0_wght400_GRAD0_opsz48.png"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\Icons\\home_FILL0_wght400_GRAD0_opsz48.png",
+      "PackagePath": "staticwebassets\\Icons\\home_FILL0_wght400_GRAD0_opsz48.png"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\Icons\\local_shipping_FILL0_wght400_GRAD0_opsz48.png",
+      "PackagePath": "staticwebassets\\Icons\\local_shipping_FILL0_wght400_GRAD0_opsz48.png"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\Icons\\lock_reset_FILL0_wght400_GRAD0_opsz48.png",
+      "PackagePath": "staticwebassets\\Icons\\lock_reset_FILL0_wght400_GRAD0_opsz48.png"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\Icons\\manage_accounts_FILL0_wght400_GRAD0_opsz48.png",
+      "PackagePath": "staticwebassets\\Icons\\manage_accounts_FILL0_wght400_GRAD0_opsz48.png"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\Icons\\person_FILL0_wght400_GRAD0_opsz48.png",
+      "PackagePath": "staticwebassets\\Icons\\person_FILL0_wght400_GRAD0_opsz48.png"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\Icons\\supervisor_account_FILL0_wght400_GRAD0_opsz48.png",
+      "PackagePath": "staticwebassets\\Icons\\supervisor_account_FILL0_wght400_GRAD0_opsz48.png"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\Icons\\taxi_alert_FILL0_wght400_GRAD0_opsz48.png",
+      "PackagePath": "staticwebassets\\Icons\\taxi_alert_FILL0_wght400_GRAD0_opsz48.png"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\Icons\\visibility_FILL0_wght400_GRAD0_opsz48.png",
+      "PackagePath": "staticwebassets\\Icons\\visibility_FILL0_wght400_GRAD0_opsz48.png"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\icon-512.png",
+      "PackagePath": "staticwebassets\\icon-512.png"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\images\\background2.jpg",
+      "PackagePath": "staticwebassets\\images\\background2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\manifest.webmanifest",
+      "PackagePath": "staticwebassets\\manifest.webmanifest"
+    },
+    {
+      "Id": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Client.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.Client.props",
+      "PackagePath": "build\\Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.Client.props",
+      "PackagePath": "buildMultiTargeting\\Client.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.Client.props",
+      "PackagePath": "buildTransitive\\Client.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
