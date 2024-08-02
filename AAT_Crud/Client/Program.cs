@@ -36,9 +36,10 @@ namespace Client
                 config.SnackbarConfiguration.HideTransitionDuration = 500;
                 config.SnackbarConfiguration.ShowTransitionDuration = 500;
                 config.SnackbarConfiguration.SnackbarVariant = Variant.Filled;
+                config.PopoverOptions.CheckForPopoverProvider = false;
             });
 
-            await builder.Build().RunAsync();
+                await builder.Build().RunAsync();
         }
     }
 }

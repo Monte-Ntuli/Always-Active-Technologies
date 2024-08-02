@@ -10,17 +10,19 @@
                     <MudCardHeader>
                         <CardHeaderContent>
                             <MudItem xs="12" sm="6" md="4">
-                                <MudField Label="Event Name" Variant="Variant.Text"></MudField>
+                                <MudTextField @bind-Value="CreateEventDTO.Name" Label="Event Name" Variant="Variant.Text"></MudTextField>
                             </MudItem>
                         </CardHeaderContent>
                     </MudCardHeader>
-                    <MudCardMedia Image="images/background2.jpg" Height="200" />
                     <MudCardContent>
                         <MudItem xs="12" sm="6" md="4">
-                            <MudField Label="Event Description" Variant="Variant.Text"></MudField>
+                            <MudTextField @bind-Value="CreateEventDTO.Description" Label="Event Description" Variant="Variant.Text"></MudTextField>
                         </MudItem>
                         <MudItem xs="12" sm="6" md="4">
-                            <MudField Label="Seats" Variant="Variant.Text"></MudField>
+                            <MudTextField @bind-Value="CreateEventDTO.Seats" Label="Number of seats" Variant="Variant.Text"></MudTextField>
+                        </MudItem>
+                        <MudItem xs="12" sm="6" md="4">
+                            <MudDatePicker Editable="true" Label="Event date" @bind-Date="_date" DateFormat="dd.MM.yyyy" />
                         </MudItem>
                     </MudCardContent>
                     <MudCardActions>
@@ -46,5 +48,36 @@
             Snackbar.Add("You are not Signed in", Severity.Warning, config => { config.ShowCloseIcon = false; });
             NavMan.NavigateTo("/Login");
         }
+    }
+
+    public async Task CreateEvent()
+    {
+        email = await localStorage.GetItemAsync<string>("UserName");
+        CreateEventDTO.EventDate = (DateTime)_date;
+        CreateEventDTO.CreatedBy = email;
+
+        if (string.IsNullOrEmpty(CreateEventDTO.Name))
+        {
+            Snackbar.Add("Name can not be empty", Severity.Error, config => { config.ShowCloseIcon = false; });
+        }
+        if (string.IsNullOrEmpty(CreateEventDTO.Description))
+        {
+            Snackbar.Add("Name can not be empty", Severity.Error, config => { config.ShowCloseIcon = false; });
+        }
+        if (string.IsNullOrEmpty(CreateEventDTO.CreatedBy))
+        {
+            Snackbar.Add("Please SignIn", Severity.Error, config => { config.ShowCloseIcon = false; });
+        }
+        if (CreateEventDTO.Seats <= 0)
+        {
+            Snackbar.Add("Name can not be empty", Severity.Error, config => { config.ShowCloseIcon = false; });
+        }
+        else
+        {
+            await EventsService.CreateEvent(CreateEventDTO);
+            Snackbar.Add("Event Created Successfully", Severity.Success, config => { config.ShowCloseIcon = false; });
+            navMan.Refresh();
+        }
+
     }
 }

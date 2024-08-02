@@ -13,5 +13,6 @@ namespace SharedClasses.DTOs
         public string Description { get; set; }
         public int Seats { get; set; }
         public string CreatedBy { get; set; }
+        public DateTime EventDate { get; set; }
     }
 }

@@ -7,9 +7,9 @@ namespace Client.Services.Interfaces
     public interface IEventsService
     {
         Task CreateEvent(CreateEventDTO createEvent);
-        Task<IEnumerable<EventsDTO>> GetAllEvents();
-        Task<IEnumerable<EventsDTO>> GetAllUserEvents(string UserId);
-        Task<HttpResponseMessage> DeleteEvent(Guid EventId);
+        Task<List<EventsDTO>> GetAllEvents();
+        Task<List<EventsDTO>> GetAllUserEvents(string UserId);
+        Task<EventsDTO> DeleteEvent(Guid EventId);
         Task Update(UpdateEventDTO updateEvent);
         Task<EventsDTO> GetEventById(Guid EventId);
     }

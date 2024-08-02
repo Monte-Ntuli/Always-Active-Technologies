@@ -36,12 +36,15 @@ namespace Client.Pages.Events
         public Guid EventId { get; set; }
         public UserDTO userInfo { get; set; }
         public CreateEventRegDTO BookEvent {  get; set; } = new CreateEventRegDTO();
-        public IEnumerable<EventsDTO> Events { get; set; } = new List<EventsDTO>();
+        public List<EventsDTO> Events { get; set; } = new List<EventsDTO>();
         public EventsDTO Event { get; set; } = new EventsDTO();
         public UpdateEventDTO updateEvent { get; set; } = new UpdateEventDTO();
         public IEnumerable<EventRegistrationDTO> EventRegistrations { get; set; } = new List<EventRegistrationDTO>();
         
         public string email;
+        public CreateEventDTO CreateEventDTO { get; set; } = new CreateEventDTO();
+
+        public DateTime? _date = DateTime.UtcNow;
         protected override async Task OnInitializedAsync()
         {
             email = await localStorage.GetItemAsync<string>("UserName");
@@ -52,10 +55,6 @@ namespace Client.Pages.Events
             }
         }
 
-        public async Task CreateEvent()
-        {
-
-        }
         public async Task BookTicket(Guid EventId)
         {
             BookEvent.EventId = EventId;
@@ -68,6 +67,7 @@ namespace Client.Pages.Events
             else
             {
                 await EventRegistrationService.CreateEventRegistration(BookEvent);
+                Snackbar.Add("Successful bookings will appear in my booked events");
             }
         }
 
@@ -80,6 +80,7 @@ namespace Client.Pages.Events
         public async Task DeleteEvent(Guid EventId)
         {
             await EventsService.DeleteEvent(EventId);
+            NavMan.Refresh();
         }
 
         public async Task UpdateEvent(Guid EventId)

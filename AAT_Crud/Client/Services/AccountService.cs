@@ -43,7 +43,6 @@ namespace Client.Services
             else
             {
                 _snackbar.Add(response.ToString(), Severity.Error, config => { config.ShowCloseIcon = false; });
-                _navMan.NavigateTo("EditProfile", true);
             }
         }
         #endregion
@@ -62,7 +61,6 @@ namespace Client.Services
             else
             {
                 _snackbar.Add(response.ToString(), Severity.Error, config => { config.ShowCloseIcon = false; });
-                _navMan.NavigateTo("ForgotPasswordChange", true);
             }
         }
 

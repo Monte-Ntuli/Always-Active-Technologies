@@ -44,17 +44,7 @@ namespace Client.Pages.Account
         #region check current url and get userdata
         protected override async Task OnInitializedAsync()
         {
-            email = await localStorage.GetItemAsync<string>("UserName");
-
-            if (email == null || email == "")
-            {
-                Snackbar.Add("You are not Signed in", Severity.Warning, config => { config.ShowCloseIcon = false; });
-                NavMan.NavigateTo("/Login");
-            }
-            else
-            {
-                await GetCurrentURI();
-            }
+            await GetCurrentURI();
         }
 
         public async Task GetCurrentURI()
@@ -64,6 +54,12 @@ namespace Client.Pages.Account
             if (currentUrl.Contains("Profile"))
             {
                 email = await JSRuntime.InvokeAsync<string>("localStorage.getItem", "UserName");
+
+                if (email == null || email == "")
+                {
+                    Snackbar.Add("You are not Signed in", Severity.Warning, config => { config.ShowCloseIcon = false; });
+                    NavMan.NavigateTo("/Login");
+                }
                 var EmailForgotPassWord = email.Remove(email.Length - 1, 1);
                 var Email = EmailForgotPassWord.Replace("\'", string.Empty).Trim(new char[] { (char)39 });
                 var username = EmailForgotPassWord.Remove(0, 1);
@@ -85,13 +81,15 @@ namespace Client.Pages.Account
             {
                 AppUser.Token = "String";
                 AppUser.UserName = AppUser.Email;
-                var response = AccountService.Register(AppUser);
+                await AccountService.Register(AppUser);
+                Snackbar.Add("Account registered successfully", Severity.Success, config => { config.ShowCloseIcon = false; });
                 NavMan.NavigateTo("/");
             }
             if (checker == false)
             {
                 Snackbar.Add("Failed to register", Severity.Warning, config => { config.ShowCloseIcon = false; });
                 NavMan.NavigateTo("Register");
+                NavMan.NavigateTo("/");
             }
 
         }
@@ -213,9 +211,10 @@ namespace Client.Pages.Account
             NavMan.NavigateTo("ForgotPasswordEmail");
         }
 
-        public async Task FindEmail(string email)
+        public async Task FindEmail()
         {
             await AccountService.FindEmail(email);
+            Snackbar.Add("Email with password reset link has been sent", Severity.Warning, config => { config.ShowCloseIcon = false; });
         }
 
         public async Task ValidatePasswordChange()

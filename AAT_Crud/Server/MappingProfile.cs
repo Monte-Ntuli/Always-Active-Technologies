@@ -13,6 +13,7 @@ namespace AAT_Crud
             CreateMap<EventsEntity, CreateEventDTO>().ReverseMap();
             CreateMap<EventRegistrationEntity, CreateEventDTO>().ReverseMap();
             CreateMap<EventsEntity, UpdateEventDTO>().ReverseMap();
+            CreateMap<EventRegistrationEntity, CreateEventRegDTO>().ReverseMap();
             
         }
     }

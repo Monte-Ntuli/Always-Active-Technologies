@@ -1,7 +1,46 @@
 ﻿@page "/MyBookings"
 @inherits EventsBase;
 
-<h3>MyBookings</h3>
+
+@if(Events.Count == 0)
+{
+    <h1>You have not booked any events</h1>
+}
+else
+{
+    <h1>My Booked Events</h1>
+}
+
+<div>
+    <main class="container">
+        <div class="row">
+            @foreach (var eventItem in Events)
+            {
+                <div class="col mt-3">
+                    <MudCard>
+                        <MudCardHeader>
+                            <CardHeaderContent>
+                                <MudText Typo="Typo.h6">@eventItem.Name</MudText>
+                            </CardHeaderContent>
+                        </MudCardHeader>
+                        <MudCardMedia Image="images/background2.jpg" Height="200" />
+                        <MudCardContent>
+                            <MudText>@eventItem.Description</MudText>
+                            <MudText Typo="Typo.body2">Booked seats @eventItem.Seats</MudText>
+                            <MudText Typo="Typo.body2">Available seats </MudText>
+                            <MudText Typo="Typo.body2">Date: @Event.EventDate </MudText>
+                        </MudCardContent>
+                        <MudCardActions>
+                            <MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick="(() => DeleteEvent(eventItem.Id) )">Remove Ticket</MudButton>
+                            &nbsp;
+                            <MudButton Variant="Variant.Outlined" Color="Color.Secondary" @onclick="(() =>ViewEvent(eventItem.Id))">View Event</MudButton>
+                        </MudCardActions>
+                    </MudCard>
+                </div>
+            }
+        </div>
+    </main>
+</div>
 
 @code {
 
@@ -19,6 +58,12 @@
         else
         {
             EventRegistrations = await EventRegistrationService.GetAllUserEventRegistrations(email);
+            Events.Clear();
+
+            foreach(var item in EventRegistrations)
+            {
+                Events.Add(await EventsService.GetEventById(item.EventId));
+            }
         }
     }
 
