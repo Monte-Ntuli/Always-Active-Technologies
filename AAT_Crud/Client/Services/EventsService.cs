@@ -66,5 +66,11 @@ namespace Client.Services
                 Snackbar.Add(result.ToString(), Severity.Error, config => { config.ShowCloseIcon = false; });
             }
         }
+
+        public async Task<EventsDTO> GetEventById(Guid EventId)
+        {
+            Event = await _httpClient.GetFromJsonAsync<EventsDTO>("https://localhost:7054/api/Event/Get-Event-By-Id" + EventId);
+            return Event;
+        }
     }
 }

@@ -1,6 +1,8 @@
 ﻿using AAT_Crud.Entities;
 using AAT_Crud.Repos.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using System.Reflection.Metadata.Ecma335;
 using System.Runtime.CompilerServices;
 
 namespace AAT_Crud.Repos
@@ -68,6 +70,17 @@ namespace AAT_Crud.Repos
 
             _dbContext.Update(entity);
             await _dbContext.SaveChangesAsync();
+            return Event;
+        }
+
+        public async Task<EventsEntity> GetEventById(Guid Id)
+        {
+            var Event = await _dbContext.Events.FirstOrDefaultAsync(x => x.Id == Id);
+            if (Event == null)
+            {
+                return null;
+            }
+
             return Event;
         }
 

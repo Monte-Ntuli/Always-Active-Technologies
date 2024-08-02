@@ -1,0 +1,44 @@
+﻿@page "/ViewEvent"
+@page "/ViewEvent/{EventId:Guid}"
+@inject NavigationManager navMan;
+@inherits EventsBase;
+
+<div>
+    <main class="container">
+        <div class="row">
+                <div class="col mt-3">
+                    <MudCard>
+                        <MudCardHeader>
+                            <CardHeaderContent>
+                                <MudText Typo="Typo.h6">@Event.Name</MudText>
+                            </CardHeaderContent>
+                        </MudCardHeader>
+                        <MudCardMedia Image="images/background2.jpg" Height="200" />
+                        <MudCardContent>
+                        <MudText>@Event.Description</MudText>
+                        <MudText Typo="Typo.body2">Booked seats @Event.Seats</MudText>
+                            <MudText Typo="Typo.body2">Available seats </MudText>
+                        </MudCardContent>
+                        <MudCardActions>
+                        <MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick="(() => BookTicket(Event.Id) )">Delete Event</MudButton>
+                            &nbsp;
+                        <MudButton Variant="Variant.Outlined" Color="Color.Secondary" @onclick="(() =>ViewEvent(Event.Id))">Update Event</MudButton>
+                        </MudCardActions>
+                    </MudCard>
+                </div>
+        </div>
+    </main>
+</div>
+
+@code {
+
+    protected override async Task OnInitializedAsync()
+    {
+        EventId.ToString();
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        Event = await EventsService.GetEventById(EventId);
+    }
+}

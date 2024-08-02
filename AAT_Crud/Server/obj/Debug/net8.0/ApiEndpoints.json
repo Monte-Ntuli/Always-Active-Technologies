@@ -59,6 +59,22 @@
   },
   {
     "ContainingType": "AAT_Crud.Controllers.EventController",
+    "Method": "GetEventById",
+    "RelativePath": "api/Event/Get-Event-By-Id/{EventId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EventId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AAT_Crud.Controllers.EventController",
     "Method": "UpdateEvents",
     "RelativePath": "api/Event/Update",
     "HttpMethod": "GET",

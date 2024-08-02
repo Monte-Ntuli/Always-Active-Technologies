@@ -1,81 +1,58 @@
 ﻿@page "/"
-@layout EmptyLayout
 @inject NavigationManager navMan;
 @inherits EventsBase;
 
 <!-- Header -->
+@if(email == null)
+{
+    @layout EmptyLayout
+    <UNAuthenticatedHeader></UNAuthenticatedHeader>
 
-<header class="py-3 mb-3 border-bottom">
-    <div class="container-fluid d-grid gap-3 align-items-center" style="grid-template-columns: 1fr 2fr;">
-        <!-- This is the Drop Down Menu -->
-        <div class="dropdown">
-            <a class="d-flex align-items-center col-lg-4 mb-2 mb-lg-0 link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                <img src="images/background2.jpg" alt="" width="32" height="32" class="rounded-circle shadow">
-                More Insights
-            </a>
-            <ul class="dropdown-menu text-small shadow" style="">
-                <li><a class="dropdown-item">Overview</a></li>
-                <li><a class="dropdown-item">Inventory</a></li>
-                <li><a class="dropdown-item">Analytics</a></li>
-            </ul>
-        </div>
-        <!-- This is the Search Button -->
-        <div class="d-flex align-items-center">
-            <form class="w-100 me-3" role="search">
-                <input type="search" class="form-control" placeholder="Search..." aria-label="Search">
-            </form>
+    <!-- Events -->
+    <h1>Available Events</h1>
 
-            <!-- This is the Profile Button -->
-
-            <div class="flex-shrink-0 dropdown">
-                <a @onclick="login"  class="d-block link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                    Login &nbsp;  <img src="iCONS/person_FILL0_wght400_GRAD0_opsz48.png" alt="" width="32" height="32" class="rounded-circle">
-                </a>
+    <div>
+        <main class="container">
+            <div class="row">
+                @foreach (var eventItem in Events)
+                {
+                    <div class="col mt-3">
+                        <MudCard>
+                            <MudCardHeader>
+                                <CardHeaderContent>
+                                    <MudText Typo="Typo.h6">@eventItem.Name</MudText>
+                                </CardHeaderContent>
+                            </MudCardHeader>
+                            <MudCardMedia Image="images/background2.jpg" Height="200" />
+                            <MudCardContent>
+                                <MudText>@eventItem.Description</MudText>
+                                <MudText Typo="Typo.body2">Booked seats @eventItem.Seats</MudText>
+                                <MudText Typo="Typo.body2">Available seats </MudText>
+                            </MudCardContent>
+                            <MudCardActions>
+                                <MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick="(() => BookTicket(eventItem.Id) )">Book Ticket</MudButton>
+                                &nbsp;
+                                <MudButton Variant="Variant.Outlined" Color="Color.Secondary" @onclick="(() =>ViewEvent(eventItem.Id))">View Event</MudButton>
+                            </MudCardActions>
+                        </MudCard>
+                    </div>
+                }
             </div>
-
-        </div>
+        </main>
     </div>
-</header>
 
-<!-- Events -->
-<h1>Available Events</h1>
+    <Footer></Footer>
+}
+else if(email != null)
+{
+    <AuthEventsList></AuthEventsList>
+}
 
-<div>
-    <main class="container">
-        <div class="row">
-            @foreach (var eventItem in Events)
-            {
-                <div class="col mt-3">
-                    <MudCard>
-                        <MudCardHeader>
-                            <CardHeaderContent>
-                                <MudText Typo="Typo.h6">@eventItem.Name</MudText>
-                            </CardHeaderContent>
-                        </MudCardHeader>
-                        <MudCardMedia Image="images/background2.jpg" Height="200" />
-                        <MudCardContent>
-                            <MudText>@eventItem.Description</MudText>
-                            <MudText Typo="Typo.body2">Booked seats @eventItem.Seats</MudText>
-                            <MudText Typo="Typo.body2">Available seats </MudText>
-                        </MudCardContent>
-                        <MudCardActions>
-                            <MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick="(() => BookTicket(eventItem.Id) )">Book Ticket</MudButton>
-                            &nbsp;
-                            <MudButton Variant="Variant.Outlined" Color="Color.Secondary" @onclick="(() =>ViewEvent(eventItem.Id))">View Event</MudButton>
-                        </MudCardActions>
-                    </MudCard>
-                </div>
-            }
-        </div>
-    </main>
-</div>
+
+
+
 
 @code {
-
-    void login()
-    {
-        navMan.NavigateTo("Login");
-    }
 
 }
 

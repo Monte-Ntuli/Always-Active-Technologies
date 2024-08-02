@@ -10,9 +10,6 @@ namespace Client.Pages.Account
 {
     public class AccountBase : ComponentBase
     {
-        [Parameter]
-        public string company { get; set; }
-
         [Inject]
         public IAccountService AccountService { get; set; }
 
@@ -32,13 +29,13 @@ namespace Client.Pages.Account
         public LoginDTO login { get; set; } = new LoginDTO();
         public IEnumerable<UserDTO> user { get; set; } = new List<UserDTO>();
 
-        public string email;
+        public string email = string.Empty;
 
-        public string confirmEmail;
+        public string confirmEmail = string.Empty;
 
-        public string confirmPassword;
+        public string confirmPassword = string.Empty;
 
-        public string NewPassword;
+        public string NewPassword = string.Empty;
 
         public bool checker = false;
 
@@ -47,8 +44,15 @@ namespace Client.Pages.Account
         #region check current url and get userdata
         protected override async Task OnInitializedAsync()
         {
-            await GetCurrentURI();
-            //isEnabled = true;
+            if(email == null || email == "")
+            {
+                Snackbar.Add("You are not Signed in", Severity.Warning, config => { config.ShowCloseIcon = false; });
+                NavMan.NavigateTo("/Login");
+            }
+            else
+            {
+                await GetCurrentURI();
+            }
         }
 
         public async Task GetCurrentURI()
@@ -158,7 +162,6 @@ namespace Client.Pages.Account
             else
             {
                 var result = AccountService.Login(login);
-                company = await localStorage.GetItemAsync<string>("UserName");
             }
 
 

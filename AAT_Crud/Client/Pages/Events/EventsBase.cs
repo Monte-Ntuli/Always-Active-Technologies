@@ -32,9 +32,14 @@ namespace Client.Pages.Events
         [Inject]
         public ILocalStorageService localStorage { get; set; }
 
+        [Parameter]
+        public Guid EventId { get; set; }
         public UserDTO userInfo { get; set; }
         public CreateEventRegDTO BookEvent {  get; set; } = new CreateEventRegDTO();
         public IEnumerable<EventsDTO> Events { get; set; } = new List<EventsDTO>();
+        public EventsDTO Event { get; set; } = new EventsDTO();
+        public UpdateEventDTO updateEvent { get; set; } = new UpdateEventDTO();
+        
         public string email;
         protected override async Task OnInitializedAsync()
         {
@@ -46,11 +51,10 @@ namespace Client.Pages.Events
             }
         }
 
-        protected override Task OnParametersSetAsync()
+        public async Task CreateEvent()
         {
-            return base.OnParametersSetAsync();
-        }
 
+        }
         public async Task BookTicket(Guid EventId)
         {
             BookEvent.EventId = EventId;
@@ -58,7 +62,7 @@ namespace Client.Pages.Events
 
             if(email == null) 
             {
-                Snackbar.Add("Please Signin to book tickets", Severity.Info, config => { config.ShowCloseIcon = false; });
+                Snackbar.Add("Please Sign in to book tickets", Severity.Info, config => { config.ShowCloseIcon = false; });
             }
             else
             {
@@ -68,7 +72,38 @@ namespace Client.Pages.Events
 
         public async Task ViewEvent(Guid EventId)
         {
+            NavMan.NavigateTo($"ViewEvent/{EventId}");
+        }
 
+        public async Task DeleteEvent(Guid EventId)
+        {
+            await EventsService.DeleteEvent(EventId);
+        }
+
+        public async Task UpdateEvent(Guid EventId)
+        {
+            updateEvent.Id = EventId;
+            if (string.IsNullOrEmpty(updateEvent.Description))
+            {
+                Snackbar.Add("Event Description can not be empty", Severity.Warning, config => { config.ShowCloseIcon = false; });
+            }
+            if (string.IsNullOrEmpty(updateEvent.Name))
+            {
+                Snackbar.Add("Event name can not be empty", Severity.Warning, config => { config.ShowCloseIcon = false; });
+            }
+            if (updateEvent.Seats <= 0)
+            {
+                Snackbar.Add("Event can not have 0 seats", Severity.Warning, config => { config.ShowCloseIcon = false; });
+            }
+            else
+            {
+                await EventsService.Update(updateEvent);
+            }
+        }
+
+        public async Task CalculateAvailableSeats()
+        {
+            
         }
     }
 }
