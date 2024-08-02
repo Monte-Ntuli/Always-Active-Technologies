@@ -1,0 +1,15 @@
+Sure, here is the text retyped from the image:
+
+---
+
+1) Create a single `sqlconnection` for all items in `results`, open the connection and close it after processing all the items in List named `results` -  
+It will reduce the execution time and improve the overall performance.
+
+2) Create a single `sqlcommand` for all items in `results` and change the `sqlcommand` according to each results item using `sqlcommand.CommandText="<new sql command>"`  
+It will reduce the execution time and improve the overall performance.
+
+3) Use try-catch block for exception handling and in case any exception occurs you should check if the `sqlconnection` is opened or not, if opened then you should close the `sqlconnection`.
+
+This will increase database access security and handle database connections properly.
+
+---
