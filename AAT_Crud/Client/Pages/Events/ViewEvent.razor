@@ -1,5 +1,5 @@
 ﻿@page "/ViewEvent"
-@page "/ViewEvent/{EventId:Guid}"
+@page "/ViewEvent/{Id:Guid}"
 @inject NavigationManager navMan;
 @inherits EventsBase;
 
@@ -33,11 +33,18 @@
 
     protected override async Task OnInitializedAsync()
     {
-        
+
     }
 
     protected override async Task OnParametersSetAsync()
     {
-        Event = await EventsService.GetEventById(EventId);
+        if (Id == Guid.Empty)
+        {
+            navMan.NavigateTo("/");
+        }
+        else
+        {
+            Event = await EventsService.GetEventById(Id);
+        }   
     }
 }

@@ -33,7 +33,7 @@ namespace Client.Pages.Events
         public ILocalStorageService localStorage { get; set; }
 
         [Parameter]
-        public Guid EventId { get; set; }
+        public Guid Id { get; set; } = Guid.NewGuid();
         public UserDTO userInfo { get; set; }
         public CreateEventRegDTO BookEvent {  get; set; } = new CreateEventRegDTO();
         public List<EventsDTO> Events { get; set; } = new List<EventsDTO>();
@@ -71,10 +71,9 @@ namespace Client.Pages.Events
             }
         }
 
-        public async Task ViewEvent(Guid EventId)
+        public async Task ViewEvent(Guid Id)
         {
-            EventId.ToString();
-            NavMan.NavigateTo($"ViewEvent/{EventId}");
+            NavMan.NavigateTo($"ViewEvent/{Id}");
         }
 
         public async Task DeleteEvent(Guid EventId)
