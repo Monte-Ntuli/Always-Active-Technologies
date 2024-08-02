@@ -59,6 +59,22 @@
   },
   {
     "ContainingType": "AAT_Crud.Controllers.EventController",
+    "Method": "GetEventByGuid",
+    "RelativePath": "api/Event/Get-Event-By-Guid/{EventId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "EventId",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "AAT_Crud.Controllers.EventController",
     "Method": "GetEventById",
     "RelativePath": "api/Event/Get-Event-By-Id/{EventId}",
     "HttpMethod": "GET",
@@ -67,7 +83,7 @@
     "Parameters": [
       {
         "Name": "EventId",
-        "Type": "System.Guid",
+        "Type": "System.Int32",
         "IsRequired": true
       }
     ],

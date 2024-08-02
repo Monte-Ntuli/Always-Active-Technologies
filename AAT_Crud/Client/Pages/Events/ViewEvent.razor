@@ -1,5 +1,5 @@
 ﻿@page "/ViewEvent"
-@page "/ViewEvent/{EventId:Guid}"
+@page "/ViewEvent/{EventId:int}"
 @inject NavigationManager navMan;
 @inherits EventsBase;
 
@@ -21,7 +21,7 @@
                         <MudText Typo="Typo.body2">Date: @Event.EventDate </MudText>
                         </MudCardContent>
                         <MudCardActions>
-                        <MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick="(() => BookTicket(Event.Id) )">Delete Event</MudButton>
+                        <MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick="(() => BookTicket(Event.Id) )">Book Event</MudButton>
                         </MudCardActions>
                     </MudCard>
                 </div>
@@ -31,13 +31,16 @@
 
 @code {
 
+    [Parameter]
+    public int EventId { get; set; }
+
     protected override async Task OnInitializedAsync()
     {
-        
+
     }
 
     protected override async Task OnParametersSetAsync()
     {
-        Event = await EventsService.GetEventById(EventId);
+        Event = await EventsService.GetEventById(EventId);   
     }
 }

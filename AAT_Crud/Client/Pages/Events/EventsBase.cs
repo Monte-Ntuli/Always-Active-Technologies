@@ -31,9 +31,6 @@ namespace Client.Pages.Events
 
         [Inject]
         public ILocalStorageService localStorage { get; set; }
-
-        [Parameter]
-        public Guid EventId { get; set; }
         public UserDTO userInfo { get; set; }
         public CreateEventRegDTO BookEvent {  get; set; } = new CreateEventRegDTO();
         public List<EventsDTO> Events { get; set; } = new List<EventsDTO>();
@@ -71,9 +68,8 @@ namespace Client.Pages.Events
             }
         }
 
-        public async Task ViewEvent(Guid EventId)
+        public async Task ViewEvent(int EventId)
         {
-            EventId.ToString();
             NavMan.NavigateTo($"ViewEvent/{EventId}");
         }
 

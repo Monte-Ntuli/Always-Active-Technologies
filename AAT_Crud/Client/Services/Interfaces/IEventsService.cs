@@ -11,6 +11,7 @@ namespace Client.Services.Interfaces
         Task<List<EventsDTO>> GetAllUserEvents(string UserId);
         Task<EventsDTO> DeleteEvent(Guid EventId);
         Task Update(UpdateEventDTO updateEvent);
-        Task<EventsDTO> GetEventById(Guid EventId);
+        Task<EventsDTO> GetEventById(int EventId);
+        Task<EventsDTO> GetEventByGuid(Guid EventId);
     }
 }
