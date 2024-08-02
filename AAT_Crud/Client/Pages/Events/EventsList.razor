@@ -22,6 +22,7 @@
                             <MudText>@eventItem.Description</MudText>
                             <MudText Typo="Typo.body2">Booked seats @eventItem.Seats</MudText>
                             <MudText Typo="Typo.body2">Available seats </MudText>
+                            <MudText Typo="Typo.body2">Date: @eventItem.EventDate </MudText>
                         </MudCardContent>
                         <MudCardActions>
                             <MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick="(() => BookTicket(eventItem.Id) )">Book Ticket</MudButton>

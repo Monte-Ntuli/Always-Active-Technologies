@@ -1,8 +1,15 @@
 ﻿@page "/MyBookings"
 @inherits EventsBase;
 
-<!-- Events -->
-<h1>My Booked Events</h1>
+
+@if(Events.Count == 0)
+{
+    <h1>You have not booked any events</h1>
+}
+else
+{
+    <h1>My Booked Events</h1>
+}
 
 <div>
     <main class="container">
@@ -21,6 +28,7 @@
                             <MudText>@eventItem.Description</MudText>
                             <MudText Typo="Typo.body2">Booked seats @eventItem.Seats</MudText>
                             <MudText Typo="Typo.body2">Available seats </MudText>
+                            <MudText Typo="Typo.body2">Date: @Event.EventDate </MudText>
                         </MudCardContent>
                         <MudCardActions>
                             <MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick="(() => DeleteEvent(eventItem.Id) )">Remove Ticket</MudButton>

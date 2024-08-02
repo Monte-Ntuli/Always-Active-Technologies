@@ -42,6 +42,9 @@ namespace Client.Pages.Events
         public IEnumerable<EventRegistrationDTO> EventRegistrations { get; set; } = new List<EventRegistrationDTO>();
         
         public string email;
+        public CreateEventDTO CreateEventDTO { get; set; } = new CreateEventDTO();
+
+        public DateTime? _date = DateTime.Today;
         protected override async Task OnInitializedAsync()
         {
             email = await localStorage.GetItemAsync<string>("UserName");
@@ -54,7 +57,10 @@ namespace Client.Pages.Events
 
         public async Task CreateEvent()
         {
+            CreateEventDTO.EventDate = (DateTime)_date;
+            CreateEventDTO.CreatedBy = email;
 
+            await EventsService.CreateEvent(CreateEventDTO);
         }
         public async Task BookTicket(Guid EventId)
         {

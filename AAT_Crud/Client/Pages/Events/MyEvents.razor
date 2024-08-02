@@ -21,6 +21,7 @@
                             <MudText>@eventItem.Description</MudText>
                             <MudText Typo="Typo.body2">Booked seats @eventItem.Seats</MudText>
                             <MudText Typo="Typo.body2">Available seats </MudText>
+                            <MudText Typo="Typo.body2">Date: @Event.EventDate </MudText>
                         </MudCardContent>
                         <MudCardActions>
                             <MudButton Variant="Variant.Outlined" Color="Color.Secondary" @onclick="(() =>DeleteEvent(eventItem.Id))">Delete Event</MudButton>

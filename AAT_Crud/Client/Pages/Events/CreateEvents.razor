@@ -10,16 +10,19 @@
                     <MudCardHeader>
                         <CardHeaderContent>
                             <MudItem xs="12" sm="6" md="4">
-                                <MudField Label="Event Name" Variant="Variant.Text"></MudField>
+                                <MudTextField @bind-Value="CreateEventDTO.Name" Label="Event Name" Variant="Variant.Text"></MudTextField>
                             </MudItem>
                         </CardHeaderContent>
                     </MudCardHeader>
                     <MudCardContent>
                         <MudItem xs="12" sm="6" md="4">
-                            <MudField Label="Event Description" Variant="Variant.Text"></MudField>
+                            <MudTextField @bind-Value="CreateEventDTO.Description" Label="Event Description" Variant="Variant.Text"></MudTextField>
                         </MudItem>
                         <MudItem xs="12" sm="6" md="4">
-                            <MudField Label="Seats" Variant="Variant.Text"></MudField>
+                            <MudTextField @bind-Value="CreateEventDTO.Seats" Label="Number of seats" Variant="Variant.Text"></MudTextField>
+                        </MudItem>
+                        <MudItem xs="12" sm="6" md="4">
+                            <MudDatePicker Label="Event date" @bind-Date = "_date" />
                         </MudItem>
                     </MudCardContent>
                     <MudCardActions>

@@ -1161,23 +1161,23 @@
       "url": "_framework\/icudt_no_CJK.dat"
     },
     {
-      "hash": "sha256-naippHAfCR8M4SckWFN7bVHKRY1nAk3cqOUQIRuLfjI=",
+      "hash": "sha256-pNWxwpFVyh0RiEyAXrh9EJLVcglFgNT2kpcGPhWOUsc=",
       "url": "_framework\/SharedClasses.wasm"
     },
     {
-      "hash": "sha256-DHojefdu3ku8pBoZvcSavb16Q++XPP92mvdkSn7sYfg=",
+      "hash": "sha256-HwHNHtZ9LI0Lfq4lYkAr56IM3yg32Nf8SqDQM9M4Jvw=",
       "url": "_framework\/SharedClasses.pdb"
     },
     {
-      "hash": "sha256-5c6ysnioYbXi9F1NkbSu5ShwCCsyTJPA5tO\/d+bMpbI=",
+      "hash": "sha256-o1W3+pnr4Jw7J7h6Vfk5h8veFSwOPWGYOehDtCvwj78=",
       "url": "_framework\/Client.wasm"
     },
     {
-      "hash": "sha256-MEpFAexlhnwRA1lwExcQnA824CFiPHmT5A+MAPnbXVM=",
+      "hash": "sha256-b7GTpZr4H+7poaMgql17Nir6rc4EPrr4Ael+GLGmUMg=",
       "url": "_framework\/Client.pdb"
     },
     {
-      "hash": "sha256-5J6j9VL7kdmfK9kTJOMp1AWRB83HV\/p2++\/Mcf+Qyjk=",
+      "hash": "sha256-F5arrKzXdYZxXs\/FZN4Tiv1+z5kY+ekzJGhsSVZanyk=",
       "url": "_framework\/blazor.boot.json"
     },
     {
@@ -1189,5 +1189,5 @@
       "url": "_content\/MudBlazor\/MudBlazor.min.js"
     }
   ],
-  "version": "OvVHGZMZ"
+  "version": "7VZCsKTC"
 };
