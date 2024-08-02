@@ -44,7 +44,7 @@ namespace Client.Pages.Events
         public string email;
         public CreateEventDTO CreateEventDTO { get; set; } = new CreateEventDTO();
 
-        public DateTime? _date = DateTime.Today;
+        public DateTime? _date = DateTime.UtcNow;
         protected override async Task OnInitializedAsync()
         {
             email = await localStorage.GetItemAsync<string>("UserName");
@@ -57,6 +57,7 @@ namespace Client.Pages.Events
 
         public async Task CreateEvent()
         {
+            email = await localStorage.GetItemAsync<string>("UserName");
             CreateEventDTO.EventDate = (DateTime)_date;
             CreateEventDTO.CreatedBy = email;
 

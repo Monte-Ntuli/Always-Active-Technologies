@@ -22,7 +22,7 @@
                             <MudTextField @bind-Value="CreateEventDTO.Seats" Label="Number of seats" Variant="Variant.Text"></MudTextField>
                         </MudItem>
                         <MudItem xs="12" sm="6" md="4">
-                            <MudDatePicker Label="Event date" @bind-Date = "_date" />
+                            <MudDatePicker Editable="true" Label="Event date" @bind-Date="_date" DateFormat="dd.MM.yyyy" />
                         </MudItem>
                     </MudCardContent>
                     <MudCardActions>
