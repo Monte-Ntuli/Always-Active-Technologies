@@ -39,6 +39,7 @@ namespace Client.Pages.Events
         public IEnumerable<EventsDTO> Events { get; set; } = new List<EventsDTO>();
         public EventsDTO Event { get; set; } = new EventsDTO();
         public UpdateEventDTO updateEvent { get; set; } = new UpdateEventDTO();
+        public IEnumerable<EventRegistrationDTO> EventRegistrations { get; set; } = new List<EventRegistrationDTO>();
         
         public string email;
         protected override async Task OnInitializedAsync()
@@ -72,6 +73,7 @@ namespace Client.Pages.Events
 
         public async Task ViewEvent(Guid EventId)
         {
+            EventId.ToString();
             NavMan.NavigateTo($"ViewEvent/{EventId}");
         }
 

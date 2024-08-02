@@ -8,7 +8,7 @@ namespace Client.Services.Interfaces
     {
         Task CreateEvent(CreateEventDTO createEvent);
         Task<IEnumerable<EventsDTO>> GetAllEvents();
-        Task<IEnumerable<EventsDTO>> GetAllUserEvents(Guid UserId);
+        Task<IEnumerable<EventsDTO>> GetAllUserEvents(string UserId);
         Task<HttpResponseMessage> DeleteEvent(Guid EventId);
         Task Update(UpdateEventDTO updateEvent);
         Task<EventsDTO> GetEventById(Guid EventId);

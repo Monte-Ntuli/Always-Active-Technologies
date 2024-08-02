@@ -1,0 +1,25 @@
+﻿@page "/MyBookings"
+@inherits EventsBase;
+
+<h3>MyBookings</h3>
+
+@code {
+
+    public string email = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        email = await localStorage.GetItemAsync<string>("UserName");
+
+        if (email == null || email == "")
+        {
+            Snackbar.Add("You are not Signed in", Severity.Warning, config => { config.ShowCloseIcon = false; });
+            NavMan.NavigateTo("/Login");
+        }
+        else
+        {
+            EventRegistrations = await EventRegistrationService.GetAllUserEventRegistrations(email);
+        }
+    }
+
+}

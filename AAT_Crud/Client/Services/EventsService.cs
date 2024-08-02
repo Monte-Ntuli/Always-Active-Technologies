@@ -40,7 +40,7 @@ namespace Client.Services
             return Events;
         }
 
-        public async Task<IEnumerable<EventsDTO>> GetAllUserEvents(Guid UserId)
+        public async Task<IEnumerable<EventsDTO>> GetAllUserEvents(string UserId)
         {
             UserEvents = await _httpClient.GetFromJsonAsync<IEnumerable<EventsDTO>>("https://localhost:7054/api/Event/Get-All-Events-By-UserId" + UserId);
             return UserEvents;

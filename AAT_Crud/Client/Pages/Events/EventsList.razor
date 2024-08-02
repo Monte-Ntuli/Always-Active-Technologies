@@ -2,52 +2,38 @@
 @inject NavigationManager navMan;
 @inherits EventsBase;
 
-<!-- Header -->
-@if(email == null)
-{
-    @layout EmptyLayout
-    <UNAuthenticatedHeader></UNAuthenticatedHeader>
+<!-- Events -->
+<h1>Available Events</h1>
 
-    <!-- Events -->
-    <h1>Available Events</h1>
-
-    <div>
-        <main class="container">
-            <div class="row">
-                @foreach (var eventItem in Events)
-                {
-                    <div class="col mt-3">
-                        <MudCard>
-                            <MudCardHeader>
-                                <CardHeaderContent>
-                                    <MudText Typo="Typo.h6">@eventItem.Name</MudText>
-                                </CardHeaderContent>
-                            </MudCardHeader>
-                            <MudCardMedia Image="images/background2.jpg" Height="200" />
-                            <MudCardContent>
-                                <MudText>@eventItem.Description</MudText>
-                                <MudText Typo="Typo.body2">Booked seats @eventItem.Seats</MudText>
-                                <MudText Typo="Typo.body2">Available seats </MudText>
-                            </MudCardContent>
-                            <MudCardActions>
-                                <MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick="(() => BookTicket(eventItem.Id) )">Book Ticket</MudButton>
-                                &nbsp;
-                                <MudButton Variant="Variant.Outlined" Color="Color.Secondary" @onclick="(() =>ViewEvent(eventItem.Id))">View Event</MudButton>
-                            </MudCardActions>
-                        </MudCard>
-                    </div>
-                }
-            </div>
-        </main>
-    </div>
-
-    <Footer></Footer>
-}
-else if(email != null)
-{
-    <AuthEventsList></AuthEventsList>
-}
-
+<div>
+    <main class="container">
+        <div class="row">
+            @foreach (var eventItem in Events)
+            {
+                <div class="col mt-3">
+                    <MudCard>
+                        <MudCardHeader>
+                            <CardHeaderContent>
+                                <MudText Typo="Typo.h6">@eventItem.Name</MudText>
+                            </CardHeaderContent>
+                        </MudCardHeader>
+                        <MudCardMedia Image="images/background2.jpg" Height="200" />
+                        <MudCardContent>
+                            <MudText>@eventItem.Description</MudText>
+                            <MudText Typo="Typo.body2">Booked seats @eventItem.Seats</MudText>
+                            <MudText Typo="Typo.body2">Available seats </MudText>
+                        </MudCardContent>
+                        <MudCardActions>
+                            <MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick="(() => BookTicket(eventItem.Id) )">Book Ticket</MudButton>
+                            &nbsp;
+                            <MudButton Variant="Variant.Outlined" Color="Color.Secondary" @onclick="(() =>ViewEvent(eventItem.Id))">View Event</MudButton>
+                        </MudCardActions>
+                    </MudCard>
+                </div>
+            }
+        </div>
+    </main>
+</div>
 
 
 

@@ -6,6 +6,6 @@ namespace Client.Services.Interfaces
     {
         Task CreateEventRegistration(CreateEventRegDTO createEventReg);
         Task<HttpResponseMessage> DeleteEventRegistration(Guid EventId);
-        Task<IEnumerable<EventRegistrationDTO>> GetAllUserEventRegistrations(Guid UserId);
+        Task<IEnumerable<EventRegistrationDTO>> GetAllUserEventRegistrations(string UserId);
     }
 }

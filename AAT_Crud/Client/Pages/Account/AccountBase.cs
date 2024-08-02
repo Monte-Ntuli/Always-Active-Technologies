@@ -44,7 +44,9 @@ namespace Client.Pages.Account
         #region check current url and get userdata
         protected override async Task OnInitializedAsync()
         {
-            if(email == null || email == "")
+            email = await localStorage.GetItemAsync<string>("UserName");
+
+            if (email == null || email == "")
             {
                 Snackbar.Add("You are not Signed in", Severity.Warning, config => { config.ShowCloseIcon = false; });
                 NavMan.NavigateTo("/Login");

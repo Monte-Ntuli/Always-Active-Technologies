@@ -45,10 +45,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XFNpZGVOYXYucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/E7240/Documents/GitHub/Always-Active-Technologies/AAT_Crud/Client/Layout/TopNav.razor]
-build_metadata.AdditionalFiles.TargetPath = TGF5b3V0XFRvcE5hdi5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/E7240/Documents/GitHub/Always-Active-Technologies/AAT_Crud/Client/Pages/Account/ChangePassword.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxDaGFuZ2VQYXNzd29yZC5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -73,10 +69,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWNjb3VudFxVc2VyUHJvZmlsZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/E7240/Documents/GitHub/Always-Active-Technologies/AAT_Crud/Client/Pages/Events/AuthEventsList.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnRzXEF1dGhFdmVudHNMaXN0LnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/E7240/Documents/GitHub/Always-Active-Technologies/AAT_Crud/Client/Pages/Events/CreateEvents.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnRzXENyZWF0ZUV2ZW50cy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -85,8 +77,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnRzXEV2ZW50c0xpc3QucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/E7240/Documents/GitHub/Always-Active-Technologies/AAT_Crud/Client/Pages/Events/UNAuthenticatedHeader.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnRzXFVOQXV0aGVudGljYXRlZEhlYWRlci5yYXpvcg==
+[C:/Users/E7240/Documents/GitHub/Always-Active-Technologies/AAT_Crud/Client/Pages/Events/MyBookings.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnRzXE15Qm9va2luZ3MucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/E7240/Documents/GitHub/Always-Active-Technologies/AAT_Crud/Client/Pages/Events/MyEvents.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXZlbnRzXE15RXZlbnRzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/E7240/Documents/GitHub/Always-Active-Technologies/AAT_Crud/Client/Pages/Events/ViewEvent.razor]

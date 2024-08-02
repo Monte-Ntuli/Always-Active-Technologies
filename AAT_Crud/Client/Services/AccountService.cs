@@ -119,7 +119,7 @@ namespace Client.Services
             if (response == System.Net.HttpStatusCode.Accepted)
             {
                 _snackbar.Add("Welcome", Severity.Success, config => { config.ShowCloseIcon = false; });
-                _navMan.NavigateTo("Dashboard", true);
+                _navMan.NavigateTo("/", true);
                 //await _jsRuntime.InvokeVoidAsync("localStorage.setItem", "UserName", loginDTO.Email);
                 await _localStorage.SetItemAsync("UserName", loginDTO.Email);
             }

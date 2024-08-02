@@ -21,8 +21,6 @@
                         </MudCardContent>
                         <MudCardActions>
                         <MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick="(() => BookTicket(Event.Id) )">Delete Event</MudButton>
-                            &nbsp;
-                        <MudButton Variant="Variant.Outlined" Color="Color.Secondary" @onclick="(() =>ViewEvent(Event.Id))">Update Event</MudButton>
                         </MudCardActions>
                     </MudCard>
                 </div>
@@ -34,7 +32,7 @@
 
     protected override async Task OnInitializedAsync()
     {
-        EventId.ToString();
+        
     }
 
     protected override async Task OnParametersSetAsync()
