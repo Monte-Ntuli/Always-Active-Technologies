@@ -1,0 +1,51 @@
+// Define the SQL query to fetch the top 1,000,000 rows from the 'received' table where status is 1, ordered by 're_ref'.
+string sql = $"SELECT TOP 1000000 * FROM received WHERE status = 1 ORDER BY re_ref";
+
+// Get a list of SQL nodes to query from the configuration.
+IEnumerable<IConfigurationSection> SqlNodes = Program.Configuration.GetSection("ConnectionStrings").GetSection("SqlNodes").GetChildren();
+
+// Initialize a list to hold the merged result set.
+List<received> results = new List<received>();
+
+// Use Parallel.ForEach to query each SQL node concurrently.
+Parallel.ForEach(SqlNodes, Node =>
+{
+    // Query the database and retrieve the results.
+    received[] result = DBQuery<received>.Query(Node.Value, sql); // Internal function to query db and return results.
+    
+    // Add the results to the merged result set.
+    results.AddRange(result);
+});
+
+// Run through the merged results and insert them into another table.
+try
+{
+    // Create and open a connection to the database.
+    SqlConnection connection = new SqlConnection(ConnectionString);
+    connection.Open();
+    
+    string que = "";
+    SqlCommand command = new SqlCommand(que, connection);
+    
+    // Iterate over each received record in the merged results.
+    foreach (received rec in results)
+    {
+        // Define the SQL query to insert the record into the 'received_total' table.
+        string query = $@"INSERT INTO received_total (rt_msisdn, rt_message) VALUES ('{rec.re_fromnum}', '{rec.re_message})";
+        
+        // Set the command text and execute the query.
+        command.CommandText = query;
+        command.ExecuteNonQuery();
+    }
+    
+    // Close the database connection.
+    connection.Close();
+}
+catch (Exception e)
+{
+    // Ensure the connection is closed in case of an exception.
+    if (connection != null && connection.State != ConnectionState.Closed)
+    {
+        connection.Close();
+    }
+}
