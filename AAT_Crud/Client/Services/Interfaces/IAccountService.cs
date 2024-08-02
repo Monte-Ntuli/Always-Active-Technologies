@@ -9,7 +9,7 @@ namespace Client.Services.Interfaces
         Task Login(LoginDTO loginDTO);
         Task FindEmail(string email);
         Task ForgotPassword(LoginDTO loginDTO);
-        Task<UserDTO> GetUserByEmailTest(string email);
+        Task<UserDTO> GetUserByEmail(string email);
 
     }
 }

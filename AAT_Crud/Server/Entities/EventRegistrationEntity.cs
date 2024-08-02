@@ -8,7 +8,7 @@ namespace AAT_Crud.Entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public Guid Id { get; set; }
-        public Guid UserId { get; set; }
+        public string UserId { get; set; }
         public Guid EventId { get; set; }
         public DateTime DateCreated { get; set; } = DateTime.Now;
         public DateTime DateModified { get; set; }

@@ -1,10 +1,10 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\",
+  "WorkspaceRootPath": "C:\\Users\\E7240\\Documents\\GitHub\\Always-Active-Technologies\\AAT_Crud\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2D991682-F2C9-4F14-B925-BD5B2B9314D8}|Client\\Client.csproj|c:\\users\\e7240\\source\\repos\\aat_crud\\client\\pages\\events\\eventslist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2D991682-F2C9-4F14-B925-BD5B2B9314D8}|Client\\Client.csproj|solutionrelative:client\\pages\\events\\eventslist.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2D991682-F2C9-4F14-B925-BD5B2B9314D8}|Client\\Client.csproj|c:\\users\\e7240\\documents\\github\\always-active-technologies\\aat_crud\\client\\services\\eventsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2D991682-F2C9-4F14-B925-BD5B2B9314D8}|Client\\Client.csproj|solutionrelative:client\\services\\eventsservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "EventsList.razor",
-              "DocumentMoniker": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\Pages\\Events\\EventsList.razor",
-              "RelativeDocumentMoniker": "Client\\Pages\\Events\\EventsList.razor",
-              "ToolTip": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\Pages\\Events\\EventsList.razor",
-              "RelativeToolTip": "Client\\Pages\\Events\\EventsList.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-08-01T08:37:10.434Z",
+              "Title": "EventsService.cs",
+              "DocumentMoniker": "C:\\Users\\E7240\\Documents\\GitHub\\Always-Active-Technologies\\AAT_Crud\\Client\\Services\\EventsService.cs",
+              "RelativeDocumentMoniker": "Client\\Services\\EventsService.cs",
+              "ToolTip": "C:\\Users\\E7240\\Documents\\GitHub\\Always-Active-Technologies\\AAT_Crud\\Client\\Services\\EventsService.cs",
+              "RelativeToolTip": "Client\\Services\\EventsService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T09:22:14.608Z",
               "EditorCaption": ""
             }
           ]

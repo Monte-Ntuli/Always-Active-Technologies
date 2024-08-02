@@ -10,9 +10,6 @@ namespace Client.Pages.Account
 {
     public class AccountBase : ComponentBase
     {
-        [Parameter]
-        public string company { get; set; }
-
         [Inject]
         public IAccountService AccountService { get; set; }
 
@@ -32,13 +29,13 @@ namespace Client.Pages.Account
         public LoginDTO login { get; set; } = new LoginDTO();
         public IEnumerable<UserDTO> user { get; set; } = new List<UserDTO>();
 
-        public string email;
+        public string email = string.Empty;
 
-        public string confirmEmail;
+        public string confirmEmail = string.Empty;
 
-        public string confirmPassword;
+        public string confirmPassword = string.Empty;
 
-        public string NewPassword;
+        public string NewPassword = string.Empty;
 
         public bool checker = false;
 
@@ -47,8 +44,17 @@ namespace Client.Pages.Account
         #region check current url and get userdata
         protected override async Task OnInitializedAsync()
         {
-            await GetCurrentURI();
-            //isEnabled = true;
+            email = await localStorage.GetItemAsync<string>("UserName");
+
+            if (email == null || email == "")
+            {
+                Snackbar.Add("You are not Signed in", Severity.Warning, config => { config.ShowCloseIcon = false; });
+                NavMan.NavigateTo("/Login");
+            }
+            else
+            {
+                await GetCurrentURI();
+            }
         }
 
         public async Task GetCurrentURI()
@@ -61,7 +67,7 @@ namespace Client.Pages.Account
                 var EmailForgotPassWord = email.Remove(email.Length - 1, 1);
                 var Email = EmailForgotPassWord.Replace("\'", string.Empty).Trim(new char[] { (char)39 });
                 var username = EmailForgotPassWord.Remove(0, 1);
-                AppUser = await AccountService.GetUserByEmailTest(username);
+                AppUser = await AccountService.GetUserByEmail(username);
             }
         }
         #endregion
@@ -158,7 +164,6 @@ namespace Client.Pages.Account
             else
             {
                 var result = AccountService.Login(login);
-                company = await localStorage.GetItemAsync<string>("UserName");
             }
 
 

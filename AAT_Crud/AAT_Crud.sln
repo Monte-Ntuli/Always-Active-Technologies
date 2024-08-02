@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AAT_Crud", "Server\AAT_Crud
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharedClasses", "SharedClasses\SharedClasses.csproj", "{41BAF98B-732E-4B1F-8D45-1834E10DDD0A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{2D991682-F2C9-4F14-B925-BD5B2B9314D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{2D991682-F2C9-4F14-B925-BD5B2B9314D8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

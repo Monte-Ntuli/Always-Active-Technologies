@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\Client.csproj": {}
+    "C:\\Users\\E7240\\Documents\\GitHub\\Always-Active-Technologies\\AAT_Crud\\Client\\Client.csproj": {}
   },
   "projects": {
-    "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\Client.csproj": {
+    "C:\\Users\\E7240\\Documents\\GitHub\\Always-Active-Technologies\\AAT_Crud\\Client\\Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\Client.csproj",
+        "projectUniqueName": "C:\\Users\\E7240\\Documents\\GitHub\\Always-Active-Technologies\\AAT_Crud\\Client\\Client.csproj",
         "projectName": "Client",
-        "projectPath": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\Client.csproj",
+        "projectPath": "C:\\Users\\E7240\\Documents\\GitHub\\Always-Active-Technologies\\AAT_Crud\\Client\\Client.csproj",
         "packagesPath": "C:\\Users\\E7240\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\Client\\obj\\",
+        "outputPath": "C:\\Users\\E7240\\Documents\\GitHub\\Always-Active-Technologies\\AAT_Crud\\Client\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\SharedClasses\\SharedClasses.csproj": {
-                "projectPath": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\SharedClasses\\SharedClasses.csproj"
+              "C:\\Users\\E7240\\Documents\\GitHub\\Always-Active-Technologies\\AAT_Crud\\SharedClasses\\SharedClasses.csproj": {
+                "projectPath": "C:\\Users\\E7240\\Documents\\GitHub\\Always-Active-Technologies\\AAT_Crud\\SharedClasses\\SharedClasses.csproj"
               }
             }
           }
@@ -86,6 +86,10 @@
             "MudBlazor": {
               "target": "Package",
               "version": "[7.5.0, )"
+            },
+            "bootstrap": {
+              "target": "Package",
+              "version": "[5.3.3, )"
             }
           },
           "imports": [
@@ -119,14 +123,14 @@
         }
       }
     },
-    "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\SharedClasses\\SharedClasses.csproj": {
+    "C:\\Users\\E7240\\Documents\\GitHub\\Always-Active-Technologies\\AAT_Crud\\SharedClasses\\SharedClasses.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\SharedClasses\\SharedClasses.csproj",
+        "projectUniqueName": "C:\\Users\\E7240\\Documents\\GitHub\\Always-Active-Technologies\\AAT_Crud\\SharedClasses\\SharedClasses.csproj",
         "projectName": "SharedClasses",
-        "projectPath": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\SharedClasses\\SharedClasses.csproj",
+        "projectPath": "C:\\Users\\E7240\\Documents\\GitHub\\Always-Active-Technologies\\AAT_Crud\\SharedClasses\\SharedClasses.csproj",
         "packagesPath": "C:\\Users\\E7240\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\E7240\\source\\repos\\AAT_Crud\\SharedClasses\\obj\\",
+        "outputPath": "C:\\Users\\E7240\\Documents\\GitHub\\Always-Active-Technologies\\AAT_Crud\\SharedClasses\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -164,6 +168,12 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.7, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

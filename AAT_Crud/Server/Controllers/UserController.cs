@@ -38,7 +38,7 @@ namespace AAT_Crud.Controllers
         }
 
         #region Register new user
-        [HttpPost("Register")] //Register a new user using Identity FrameWork... this is for admins
+        [HttpPost("Register")]
         public async Task<IActionResult> RegisterUser([FromBody] UserDTO userDTO)
         {
 

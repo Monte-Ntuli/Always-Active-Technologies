@@ -1,0 +1,50 @@
+﻿@page "/CreateEvent"
+@inject NavigationManager navMan;
+@inherits EventsBase;
+
+<div>
+    <main class="container">
+        <div class="row">
+            <div class="col mt-3">
+                <MudCard>
+                    <MudCardHeader>
+                        <CardHeaderContent>
+                            <MudItem xs="12" sm="6" md="4">
+                                <MudField Label="Event Name" Variant="Variant.Text"></MudField>
+                            </MudItem>
+                        </CardHeaderContent>
+                    </MudCardHeader>
+                    <MudCardMedia Image="images/background2.jpg" Height="200" />
+                    <MudCardContent>
+                        <MudItem xs="12" sm="6" md="4">
+                            <MudField Label="Event Description" Variant="Variant.Text"></MudField>
+                        </MudItem>
+                        <MudItem xs="12" sm="6" md="4">
+                            <MudField Label="Seats" Variant="Variant.Text"></MudField>
+                        </MudItem>
+                    </MudCardContent>
+                    <MudCardActions>
+                        <MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick="CreateEvent">Create Event </MudButton>
+                        &nbsp;
+                    </MudCardActions>
+                </MudCard>
+            </div>
+        </div>
+    </main>
+</div>
+
+@code {
+
+    public string email = string.Empty;
+
+    protected override async Task OnInitializedAsync()
+    {
+        email = await localStorage.GetItemAsync<string>("UserName");
+
+        if (email == null || email == "")
+        {
+            Snackbar.Add("You are not Signed in", Severity.Warning, config => { config.ShowCloseIcon = false; });
+            NavMan.NavigateTo("/Login");
+        }
+    }
+}

@@ -30,11 +30,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Migrations\" />
+    <ProjectReference Include="..\SharedClasses\SharedClasses.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SharedClasses\SharedClasses.csproj" />
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

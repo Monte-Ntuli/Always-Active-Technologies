@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = SharedClasses
-build_property.ProjectDir = C:\Users\E7240\source\repos\AAT_Crud\SharedClasses\
+build_property.ProjectDir = C:\Users\E7240\Documents\GitHub\Always-Active-Technologies\AAT_Crud\SharedClasses\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

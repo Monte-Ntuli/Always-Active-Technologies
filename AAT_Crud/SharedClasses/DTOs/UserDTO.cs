@@ -1,4 +1,4 @@
-﻿
+﻿using Microsoft.AspNetCore.Identity;
 namespace SharedClasses.DTOs
 {
     public class UserDTO

@@ -7,7 +7,8 @@ namespace AAT_Crud.Repos.Interfaces
         Task<EventsEntity> AddAsync(EventsEntity entity);
         Task<EventsEntity> DeleteAsync(Guid Id);
         Task<List<EventsEntity>> GetAllEvents();
-        Task<List<EventsEntity>> GetAllEventsByUser(Guid Id);
+        Task<List<EventsEntity>> GetAllEventsByUser(string Id);
         Task<EventsEntity> UpdateEvent(EventsEntity entity);
+        Task<EventsEntity> GetEventById(Guid Id);
     }
 }
