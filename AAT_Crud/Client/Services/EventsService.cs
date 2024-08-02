@@ -32,6 +32,7 @@ namespace Client.Services
             else
             {
                 Snackbar.Add(result.ToString(), Severity.Error, config => { config.ShowCloseIcon = false; });
+                createEvents = await result.Content.ReadFromJsonAsync<CreateEventDTO>();
             }
         }
         public async Task<List<EventsDTO>> GetAllEvents()
@@ -64,6 +65,7 @@ namespace Client.Services
             else
             {
                 Snackbar.Add(result.ToString(), Severity.Error, config => { config.ShowCloseIcon = false; });
+                Event = await result.Content.ReadFromJsonAsync<EventsDTO>();
             }
         }
 

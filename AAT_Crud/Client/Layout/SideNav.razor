@@ -9,6 +9,7 @@
         <MudNavLink Href="/MyBookings" Match="NavLinkMatch.Prefix">My Booked Events</MudNavLink>
     </MudNavGroup>
     <MudNavLink @onclick="Logout" Match="NavLinkMatch.Prefix">Log out</MudNavLink>
+    <MudNavLink @onclick="Register" Match="NavLinkMatch.Prefix">Register</MudNavLink>
 </MudNavMenu>
 
 @code {
@@ -16,5 +17,11 @@
     {
         localStorage.ClearAsync();
         navMan.NavigateTo("/");
+    }
+
+    void Register()
+    {
+        localStorage.ClearAsync();
+        navMan.NavigateTo("/Register");
     }
 }

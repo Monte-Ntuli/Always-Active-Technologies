@@ -27,9 +27,10 @@ namespace Client.Services
                 var response = await result.Content.ReadFromJsonAsync<CreateEventRegDTO>();
                 CreateEventReg = response;
             }
-            else
+            else if(result.StatusCode == System.Net.HttpStatusCode.BadRequest)
             {
                 Snackbar.Add(result.ToString(), Severity.Error, config => { config.ShowCloseIcon = false; });
+                CreateEventReg = await result.Content.ReadFromJsonAsync<CreateEventRegDTO>();
             }
         }
 

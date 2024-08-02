@@ -67,6 +67,7 @@ namespace Client.Pages.Events
             else
             {
                 await EventRegistrationService.CreateEventRegistration(BookEvent);
+                Snackbar.Add("Successful bookings will appear in my booked events");
             }
         }
 
