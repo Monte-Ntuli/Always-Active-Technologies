@@ -61,7 +61,28 @@ namespace Client.Pages.Events
             CreateEventDTO.EventDate = (DateTime)_date;
             CreateEventDTO.CreatedBy = email;
 
-            await EventsService.CreateEvent(CreateEventDTO);
+            if(string.IsNullOrEmpty(CreateEventDTO.Name))
+            {
+                Snackbar.Add("Name can not be empty", Severity.Error, config => { config.ShowCloseIcon = false; });
+            }
+            if (string.IsNullOrEmpty(CreateEventDTO.Description))
+            {
+                Snackbar.Add("Name can not be empty", Severity.Error, config => { config.ShowCloseIcon = false; });
+            }
+            if (string.IsNullOrEmpty(CreateEventDTO.CreatedBy))
+            {
+                Snackbar.Add("Please SignIn", Severity.Error, config => { config.ShowCloseIcon = false; });
+            }
+            if (CreateEventDTO.Seats <= 0)
+            {
+                Snackbar.Add("Name can not be empty", Severity.Error, config => { config.ShowCloseIcon = false; });
+            }
+            else
+            {
+                await EventsService.CreateEvent(CreateEventDTO);
+                Snackbar.Add("Event Created Successfully", Severity.Success, config => { config.ShowCloseIcon = false; });
+            }
+            
         }
         public async Task BookTicket(Guid EventId)
         {
@@ -87,6 +108,7 @@ namespace Client.Pages.Events
         public async Task DeleteEvent(Guid EventId)
         {
             await EventsService.DeleteEvent(EventId);
+            //NavMan.Refresh();
         }
 
         public async Task UpdateEvent(Guid EventId)
