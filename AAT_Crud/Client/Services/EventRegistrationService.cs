@@ -33,15 +33,15 @@ namespace Client.Services
             }
         }
 
-        public async Task<HttpResponseMessage> DeleteEventRegistration(string EventId)
+        public async Task<HttpResponseMessage> DeleteEventRegistration(Guid EventId)
         {
-            var DeleteEvent = await _httpClient.PostAsJsonAsync<string>("https://localhost:7054/api/EventRegistration/Delete/", EventId);
+            var DeleteEvent = await _httpClient.PostAsJsonAsync<Guid>("https://localhost:7054/api/EventRegistration/Delete/", EventId);
             return DeleteEvent;
         }
 
-        public async Task<IEnumerable<EventRegistrationDTO>> GetAllUserEventRegistrations(Guid UserId)
+        public async Task<IEnumerable<EventRegistrationDTO>> GetAllUserEventRegistrations(string UserId)
         {
-            UserEventReg = await _httpClient.GetFromJsonAsync<IEnumerable<EventRegistrationDTO>>("https://localhost:7054/api/EventRegistration/Get-Registered" + UserId);
+            UserEventReg = await _httpClient.GetFromJsonAsync<IEnumerable<EventRegistrationDTO>>("https://localhost:7054/api/EventRegistration/Get-Registered/" + UserId);
             return UserEventReg;
         }
     }

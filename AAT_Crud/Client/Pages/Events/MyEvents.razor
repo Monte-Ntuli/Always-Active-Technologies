@@ -1,7 +1,36 @@
 ﻿@page "/MyEvents"
 @inherits EventsBase;
 
-<h3>MyEvents</h3>
+<!-- Events -->
+<h1>My Events</h1>
+
+<div>
+    <main class="container">
+        <div class="row">
+            @foreach (var eventItem in Events)
+            {
+                <div class="col mt-3">
+                    <MudCard>
+                        <MudCardHeader>
+                            <CardHeaderContent>
+                                <MudText Typo="Typo.h6">@eventItem.Name</MudText>
+                            </CardHeaderContent>
+                        </MudCardHeader>
+                        <MudCardMedia Image="images/background2.jpg" Height="200" />
+                        <MudCardContent>
+                            <MudText>@eventItem.Description</MudText>
+                            <MudText Typo="Typo.body2">Booked seats @eventItem.Seats</MudText>
+                            <MudText Typo="Typo.body2">Available seats </MudText>
+                        </MudCardContent>
+                        <MudCardActions>
+                            <MudButton Variant="Variant.Outlined" Color="Color.Secondary" @onclick="(() =>DeleteEvent(eventItem.Id))">Delete Event</MudButton>
+                        </MudCardActions>
+                    </MudCard>
+                </div>
+            }
+        </div>
+    </main>
+</div>
 
 @code {
 
@@ -16,8 +45,10 @@
             Snackbar.Add("You are not Signed in", Severity.Warning, config => { config.ShowCloseIcon = false; });
             NavMan.NavigateTo("/Login");
         }
-
-        Events = await EventsService.GetAllUserEvents(email);
+        else
+        {
+            Events = await EventsService.GetAllUserEvents(email);
+        }
     }
 
 }

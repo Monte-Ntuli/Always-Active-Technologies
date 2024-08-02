@@ -14,8 +14,8 @@ namespace Client.Services
         private readonly HttpClient _httpClient;
         public CreateEventDTO createEvents {  get; set; }
         public EventsDTO Event {  get; set; }
-        public IEnumerable<EventsDTO> Events { get; set; } = new List<EventsDTO>();
-        public IEnumerable<EventsDTO> UserEvents { get; set; } = new List<EventsDTO>();
+        public List<EventsDTO> Events { get; set; } = new List<EventsDTO>();
+        public List<EventsDTO> UserEvents { get; set; } = new List<EventsDTO>();
         public EventsService(HttpClient httpClient)
         {
             _httpClient = httpClient;
@@ -34,15 +34,15 @@ namespace Client.Services
                 Snackbar.Add(result.ToString(), Severity.Error, config => { config.ShowCloseIcon = false; });
             }
         }
-        public async Task<IEnumerable<EventsDTO>> GetAllEvents()
+        public async Task<List<EventsDTO>> GetAllEvents()
         {
-            Events = await _httpClient.GetFromJsonAsync<IEnumerable<EventsDTO>>("https://localhost:7054/api/Event/Get-All-Events");
+            Events = await _httpClient.GetFromJsonAsync<List<EventsDTO>>("https://localhost:7054/api/Event/Get-All-Events");
             return Events;
         }
 
-        public async Task<IEnumerable<EventsDTO>> GetAllUserEvents(string UserId)
+        public async Task<List<EventsDTO>> GetAllUserEvents(string UserId)
         {
-            UserEvents = await _httpClient.GetFromJsonAsync<IEnumerable<EventsDTO>>("https://localhost:7054/api/Event/Get-All-Events-By-UserId" + UserId);
+            UserEvents = await _httpClient.GetFromJsonAsync<List<EventsDTO>>("https://localhost:7054/api/Event/Get-All-Events-By-UserId/" + UserId);
             return UserEvents;
         }
 
@@ -69,7 +69,7 @@ namespace Client.Services
 
         public async Task<EventsDTO> GetEventById(Guid EventId)
         {
-            Event = await _httpClient.GetFromJsonAsync<EventsDTO>("https://localhost:7054/api/Event/Get-Event-By-Id" + EventId);
+            Event = await _httpClient.GetFromJsonAsync<EventsDTO>("https://localhost:7054/api/Event/Get-Event-By-Id/" + EventId);
             return Event;
         }
     }

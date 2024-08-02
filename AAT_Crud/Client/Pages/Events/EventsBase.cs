@@ -36,7 +36,7 @@ namespace Client.Pages.Events
         public Guid EventId { get; set; }
         public UserDTO userInfo { get; set; }
         public CreateEventRegDTO BookEvent {  get; set; } = new CreateEventRegDTO();
-        public IEnumerable<EventsDTO> Events { get; set; } = new List<EventsDTO>();
+        public List<EventsDTO> Events { get; set; } = new List<EventsDTO>();
         public EventsDTO Event { get; set; } = new EventsDTO();
         public UpdateEventDTO updateEvent { get; set; } = new UpdateEventDTO();
         public IEnumerable<EventRegistrationDTO> EventRegistrations { get; set; } = new List<EventRegistrationDTO>();
