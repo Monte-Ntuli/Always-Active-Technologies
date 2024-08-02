@@ -69,9 +69,15 @@ namespace Client.Services
             }
         }
 
-        public async Task<EventsDTO> GetEventById(Guid EventId)
+        public async Task<EventsDTO> GetEventById(int EventId)
         {
             Event = await _httpClient.GetFromJsonAsync<EventsDTO>("https://localhost:7054/api/Event/Get-Event-By-Id/" + EventId);
+            return Event;
+        }
+
+        public async Task<EventsDTO> GetEventByGuid(Guid EventId)
+        {
+            Event = await _httpClient.GetFromJsonAsync<EventsDTO>("https://localhost:7054/api/Event/Get-Event-By-Guid/" + EventId);
             return Event;
         }
     }

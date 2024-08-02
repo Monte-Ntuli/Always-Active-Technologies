@@ -71,10 +71,19 @@ namespace AAT_Crud.Controllers
 
         #region Get event by id
         [HttpGet("Get-Event-By-Id/{EventId}")]
-        public async Task<IActionResult> GetEventById(Guid EventId)
+        public async Task<IActionResult> GetEventById(int EventId)
         {
             var Event = await _unitOfWork.Events.GetEventById(EventId);
             if(Event != null) { return Accepted(Event); } else return BadRequest(Event);
+        }
+        #endregion
+
+        #region Get event by guid
+        [HttpGet("Get-Event-By-Guid/{EventId}")]
+        public async Task<IActionResult> GetEventByGuid(Guid EventId)
+        {
+            var Event = await _unitOfWork.Events.GetEventByGuid(EventId);
+            if (Event != null) { return Accepted(Event); } else return BadRequest(Event);
         }
         #endregion
 

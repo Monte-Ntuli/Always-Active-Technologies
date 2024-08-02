@@ -33,7 +33,7 @@ else
                         <MudCardActions>
                             <MudButton Variant="Variant.Filled" Color="Color.Primary" @onclick="(() => DeleteEvent(eventItem.Id) )">Remove Ticket</MudButton>
                             &nbsp;
-                            <MudButton Variant="Variant.Outlined" Color="Color.Secondary" @onclick="(() =>ViewEvent(eventItem.Id))">View Event</MudButton>
+                            <MudButton Variant="Variant.Outlined" Color="Color.Secondary" @onclick="(() =>ViewEvent(eventItem.EventId))">View Event</MudButton>
                         </MudCardActions>
                     </MudCard>
                 </div>
@@ -62,7 +62,7 @@ else
 
             foreach(var item in EventRegistrations)
             {
-                Events.Add(await EventsService.GetEventById(item.EventId));
+                Events.Add(await EventsService.GetEventByGuid(item.EventId));
             }
         }
     }

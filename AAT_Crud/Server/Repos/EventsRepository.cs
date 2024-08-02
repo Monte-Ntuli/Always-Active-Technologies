@@ -19,12 +19,22 @@ namespace AAT_Crud.Repos
         public async override Task<EventsEntity> AddAsync(EventsEntity entity)
         {
             entity.Id = Guid.NewGuid();
+            entity.EventId = GenerateEventID();
             entity.DateModified = DateTime.UtcNow;
             await _dbContext.AddAsync(entity);
             await _dbContext.SaveChangesAsync();
             return entity;
         }
 
+        private int GenerateEventID()
+        {
+            var highestId = _dbContext.Events.OrderByDescending(x => x.EventId).FirstOrDefault();
+            if (highestId != null)
+            {
+                return highestId.EventId + 1;
+            }
+            return 1;
+        }
         public async Task<EventsEntity> DeleteAsync(Guid Id)
         {
             var Event = await _dbContext.Events.FirstOrDefaultAsync(x => x.Id == Id);
@@ -73,7 +83,18 @@ namespace AAT_Crud.Repos
             return Event;
         }
 
-        public async Task<EventsEntity> GetEventById(Guid Id)
+        public async Task<EventsEntity> GetEventById(int Id)
+        {
+            var Event = await _dbContext.Events.FirstOrDefaultAsync(x => x.EventId == Id);
+            if (Event == null)
+            {
+                return null;
+            }
+
+            return Event;
+        }
+
+        public async Task<EventsEntity> GetEventByGuid(Guid Id)
         {
             var Event = await _dbContext.Events.FirstOrDefaultAsync(x => x.Id == Id);
             if (Event == null)

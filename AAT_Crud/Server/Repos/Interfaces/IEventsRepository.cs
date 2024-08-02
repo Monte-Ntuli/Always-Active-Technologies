@@ -9,6 +9,7 @@ namespace AAT_Crud.Repos.Interfaces
         Task<List<EventsEntity>> GetAllEvents();
         Task<List<EventsEntity>> GetAllEventsByUser(string Id);
         Task<EventsEntity> UpdateEvent(EventsEntity entity);
-        Task<EventsEntity> GetEventById(Guid Id);
+        Task<EventsEntity> GetEventById(int Id);
+        Task<EventsEntity> GetEventByGuid(Guid Id);
     }
 }
