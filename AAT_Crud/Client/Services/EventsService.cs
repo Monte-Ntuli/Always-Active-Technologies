@@ -46,10 +46,10 @@ namespace Client.Services
             return UserEvents;
         }
 
-        public async Task<HttpResponseMessage> DeleteEvent(Guid EventId)
+        public async Task<EventsDTO> DeleteEvent(Guid EventId)
         {
-            var DeleteEvent = await _httpClient.PostAsJsonAsync<Guid>("https://localhost:7054/api/Event/Delete/", EventId);
-            return DeleteEvent;
+           var deletedEvent = await _httpClient.DeleteFromJsonAsync<EventsDTO>("https://localhost:7054/api/Event/Delete/" + EventId);
+            return deletedEvent;
         }
 
         public async Task Update(UpdateEventDTO updateEvent)
