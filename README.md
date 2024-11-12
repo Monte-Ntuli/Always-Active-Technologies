@@ -1,7 +1,3 @@
-Here's a README tailored specifically for the **AAT_Crud** directory in your **Always Active Technologies** repository:
-
----
-
 # AAT_CRUD
 
 The **AAT_CRUD** project is a simple yet powerful CRUD (Create, Read, Update, Delete) application designed to demonstrate fundamental database operations. Built as part of the Always Active Technologies suite, this project serves as a foundation for managing data in a database and learning essential CRUD functionalities in a real-world application setting.
